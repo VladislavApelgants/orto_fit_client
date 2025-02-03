@@ -1,8 +1,3 @@
-// const { writeFileSync, existsSync, mkdirSync } = require("fs");
-// const { config } = require("dotenv");
-// const axios = require("axios");
-// const { resolve } = require("node:path");
-
 import axios from "axios";
 import { config } from "dotenv";
 import { existsSync, mkdirSync, writeFileSync } from "fs";
@@ -12,8 +7,11 @@ config({
 });
 
 const API_URL = process.env.NEXT_PUBLIC_TOLGEE_API_URL || "";
+console.log("😎 ~ API_URL:", API_URL);
 const API_KEY = process.env.NEXT_PUBLIC_TOLGEE_API_KEY || "";
+console.log("😎 ~ API_KEY:", API_KEY);
 const PROJECT_ID = process.env.NEXT_PUBLIC_PROJECT_ID || "";
+console.log("😎 ~ PROJECT_ID:", PROJECT_ID);
 
 const localesInstance = axios.create({
   baseURL: `${API_URL}/v2/projects/${PROJECT_ID}/`,
@@ -40,9 +38,9 @@ const updateLocales = async () => {
     const languages = languagesRes.data?._embedded.languages.map(
       (lang) => lang.tag
     );
-    console.log("😎 ~ updateLocales ~ languages:", namespacesRes.data);
     const namespaces =
       namespacesRes.data?._embedded?.namespaces?.map((ns) => ns.name) ?? [];
+    console.log("😎 ~ updateLocales ~ languages:", namespaces);
 
     for (const lang of languages) {
       const result = await Promise.allSettled(

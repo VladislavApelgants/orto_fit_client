@@ -1,0 +1,60 @@
+// block cursor-pointer appearance-none border-none bg-background bg-none p-0 pr-8 font-roboto uppercase text-foreground
+.lang_selector_wrapper_mobile {
+  position: relative;
+  display: flex;
+  gap: 16px;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+.lang_selector_wrapper_desc {
+  display: none;
+  align-items: center;
+  gap: 16px;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+}
+.lang_selector {
+  display: block;
+  cursor: pointer;
+  appearance: none;
+  border: none;
+  background-color: aquamarine;
+  padding: 0;
+  padding-right: 32px;
+  font-family: "Roboto, sans-serif";
+  text-transform: uppercase;
+  color: black;
+}
+
+.wrapper_mobile_icon {
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+}
+
+.desc_btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-family: "Roboto sans-serif";
+}
+.selected_lang {
+  position: absolute;
+  bottom: 0;
+  left: 25%; /* 1/4 */
+  height: 1px;
+  width: 5px;
+  transform: translateX(-50%);
+  border-radius: 9999px; /* rounded-t-full эквивалент */
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--foreground-color),
+    transparent
+  );
+}

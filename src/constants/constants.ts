@@ -1,8 +1,8 @@
-export const ALL_LANGUAGES = ["en", "ua", "ru"];
-export const DEFAULT_LANGUAGE = "ua";
+export const ALL_LANGUAGES = ["en", "uk", "ru"];
+export const DEFAULT_LANGUAGE = "uk";
 
-export const HOME_NS = "home";
-export const FOOTER_NS = "footer";
+// export const HOME_NS = "main";
+// export const FOOTER_NS = "footer";
 // export const PORTFOLIO_NS = 'Development stages';
 // export const ABOUT_US_NS = 'Feedback';
 // export const CONTACT_US_NS = 'Footer';
@@ -14,9 +14,9 @@ export const HEADER_NS = "header";
 // export const COOKIE_BANNER_N1 = 'We-offer';
 
 export const NAMESPACES = [
-  HOME_NS,
+  // HOME_NS,
   HEADER_NS,
-  FOOTER_NS,
+  // FOOTER_NS,
   // PORTFOLIO_NS,
   // COOKIE_BANNER_NS,
   // ABOUT_US_NS,

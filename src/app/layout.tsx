@@ -1,6 +1,6 @@
+import { Header } from "@/components/layout/Header/Header";
 import { TolgeeNextProvider } from "@/tolgee/client";
 import { getLanguage } from "@/tolgee/language";
-import { getTranslate } from "@/tolgee/server";
 import { getStaticData } from "@/tolgee/shared";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
@@ -28,12 +28,12 @@ export default async function RootLayout({
 }>) {
   const locale = await getLanguage();
   const staticData = await getStaticData([locale]);
-  const t = await getTranslate();
-  console.log("😎 ~ t:", t);
+  console.log("😎 ~ staticData:", staticData);
   return (
     <html lang={locale}>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <TolgeeNextProvider language={locale} staticData={staticData}>
+          <Header />
           {children}
         </TolgeeNextProvider>
       </body>
