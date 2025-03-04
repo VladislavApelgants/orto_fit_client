@@ -1,10 +1,13 @@
 // block cursor-pointer appearance-none border-none bg-background bg-none p-0 pr-8 font-roboto uppercase text-foreground
+.selector_wrapper {
+  width: max-content;
+}
 .lang_selector_wrapper_mobile {
   position: relative;
   display: flex;
   gap: 16px;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1024px) {
     display: none;
   }
 }
@@ -13,7 +16,7 @@
   align-items: center;
   gap: 16px;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1024px) {
     display: flex;
   }
 }
@@ -22,10 +25,9 @@
   cursor: pointer;
   appearance: none;
   border: none;
-  background-color: aquamarine;
-  padding: 0;
-  padding-right: 32px;
-  font-family: "Roboto, sans-serif";
+  background-color: transparent;
+  padding: 0 32px 0 0;
+  font-family: Roboto, sans-serif;
   text-transform: uppercase;
   color: black;
 }
@@ -33,7 +35,8 @@
 .wrapper_mobile_icon {
   pointer-events: none;
   position: absolute;
-  right: 0;
+  right: 2px;
+  top:-4px;
 }
 
 .desc_btn {
@@ -41,7 +44,7 @@
   display: flex;
   align-items: center;
   gap: 16px;
-  font-family: "Roboto sans-serif";
+  font-family: Roboto, sans-serif;
 }
 .selected_lang {
   position: absolute;

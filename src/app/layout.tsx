@@ -1,20 +1,17 @@
+import { Footer } from "@/components/layout/Footer/Footer";
+import { HeadContacts } from "@/components/layout/HeadContacts/HeadContacts";
 import { Header } from "@/components/layout/Header/Header";
 import { TolgeeNextProvider } from "@/tolgee/client";
 import { getLanguage } from "@/tolgee/language";
 import { getStaticData } from "@/tolgee/shared";
+import {
+  geistMono,
+  geistMontserrat,
+  geistPlayfairDisplay,
+  geistSans,
+} from "@/utils/fonts";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./global.scss";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -28,13 +25,17 @@ export default async function RootLayout({
 }>) {
   const locale = await getLanguage();
   const staticData = await getStaticData([locale]);
-  console.log("😎 ~ staticData:", staticData);
+
   return (
     <html lang={locale}>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} ${geistMontserrat.variable} ${geistMontserrat.variable} ${geistPlayfairDisplay.variable} `}
+      >
         <TolgeeNextProvider language={locale} staticData={staticData}>
+          <HeadContacts />
           <Header />
           {children}
+          <Footer />
         </TolgeeNextProvider>
       </body>
     </html>

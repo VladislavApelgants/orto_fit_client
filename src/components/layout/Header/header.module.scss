@@ -1,0 +1,61 @@
+@import "../../../styles/mixins/mixins.scss";
+
+.header {
+  background-color: var(--header_bgc);
+  padding-top: 5px;
+  padding-bottom: 15px;
+  position: relative;
+}
+
+.contacts_block {
+  @include flex();
+  margin-bottom: 24px;
+  background-color: #736d6d;
+}
+
+.header_wrapper {
+  @include flex();
+  flex-direction: row;
+}
+
+.header_logo {
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+  font-size: 32px;
+  margin-right: 48px;
+
+  @media screen and (min-width: 1024px) {
+    margin-right: 70px;
+  }
+}
+
+.header_nav_block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  @media screen and (min-width: 768px){
+    width: auto;
+  }
+}
+
+.header_service_block {
+  display: none;
+  align-items: center;
+  gap: 24px;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+}
+
+.nav_block {
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+}
+
+

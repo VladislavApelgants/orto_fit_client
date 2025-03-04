@@ -1,0 +1,12 @@
+@import "../../../styles/mixins/mixins.scss";
+.head_contacts {
+  background-color: #736d6d;
+  display: none;
+  @media screen and (min-width: 768px)  {
+    display: block;
+  }
+}
+
+.contacts_block {
+  @include flex();
+}

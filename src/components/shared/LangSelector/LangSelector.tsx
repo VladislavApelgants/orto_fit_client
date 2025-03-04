@@ -24,7 +24,7 @@ export const LangSelector: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className={s.selector_wrapper}>
       {/*Мобильная версия*/}
       <div className={s.lang_selector_wrapper_mobile}>
         <Select
@@ -56,7 +56,7 @@ export const LangSelector: React.FC = () => {
           >
             {lang}
             {selectedLang === lang && <span className={s.selected_lang}></span>}
-            {index < ALL_LANGUAGES.length - 1 && (
+            {index < ALL_LANGUAGES.length && (
               <Icon type="langDot" width={5} height={5} />
             )}
           </button>

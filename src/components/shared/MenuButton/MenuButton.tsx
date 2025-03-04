@@ -1,6 +1,6 @@
 import { Icon } from '@/components/ui/Icon/Icon';
 import {JSX} from 'react';
-import s from "./mobMenu.module.scss"
+import s from "./menuButton.module.scss"
 
 export const MenuButton = ():JSX.Element => {
 

@@ -1,0 +1,9 @@
+@import "../../../../styles/mixins/mixins.scss";
+
+.social_block {
+  display: none;
+  gap: 16px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+}
