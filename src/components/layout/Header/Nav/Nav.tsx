@@ -1,6 +1,6 @@
 import { getTranslate } from "@/tolgee/server";
 import Link from "next/link";
-import React, {FC, JSX} from "react";
+import { FC, JSX } from "react";
 import s from "./nav.module.scss";
 
 type NavTypes = {
@@ -13,19 +13,29 @@ export const Nav: FC<NavTypes> = async ({ navClass }): Promise<JSX.Element> => {
     <nav className={navClass}>
       <ul className={s.nav_list}>
         <li>
-          <Link href="/Home">{t("header.homeLink")}</Link>
+          <Link href="/Home" className={s.nav_link}>
+            {t("header.homeLink")}
+          </Link>
         </li>
         <li>
-          <Link href="/Home">{t("header.products")}</Link>
+          <Link href="/Home" className={s.nav_link}>
+            {t("header.products")}
+          </Link>
         </li>
         <li>
-          <Link href="/Home">О нас</Link>
+          <Link href="/Home" className={s.nav_link}>
+            О нас
+          </Link>
         </li>
         <li>
-          <Link href="/Home">Доставка</Link>
+          <Link href="/Home" className={s.nav_link}>
+            Доставка
+          </Link>
         </li>
         <li>
-          <Link href="/Home">{t("header.contacts")}</Link>
+          <Link href="/Home" className={s.nav_link}>
+            {t("header.contacts")}
+          </Link>
         </li>
       </ul>
     </nav>

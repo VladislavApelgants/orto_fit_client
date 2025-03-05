@@ -1,15 +1,19 @@
 @import "../styles/mixins/mixins.scss";
+
 :root {
-  --background: #ffd9b3;
+  --background: #c9c9c9;
   --foreground: #171717;
   --header_bgc: rgb(195, 138, 68);
+  --aboveHeader_bgc: #a5c926;
+  --main_text_color: #111111;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #ffd9b3;
+    --background: #c9c9c9;
     --foreground: #ededed;
     --header_bgc: rgb(195, 138, 68);
+    --main_text_color: #111111;
   }
 }
 
@@ -39,9 +43,11 @@ body {
     font-size: 18px;
   }
 }
+
 main {
-  flex: 1; /* Растягивает контент на всю доступную высоту */
+  flex: 1;
 }
+
 .footer {
   background: #333;
   color: white;
@@ -60,6 +66,7 @@ a {
   font-family: inherit;
   text-decoration: none;
 }
+
 ul {
   margin: 0;
   padding-left: 0;
@@ -71,6 +78,7 @@ ul {
     color-scheme: dark;
   }
 }
+
 .container {
   width: 100%;
   padding: 0 10px;
