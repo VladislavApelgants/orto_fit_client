@@ -11,7 +11,6 @@ export const IconConfig = {
   lang: (
     <path
       d="M20 8.25L12.5 15.75L5 8.25"
-      stroke="currentColor"
       strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"

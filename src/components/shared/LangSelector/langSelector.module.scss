@@ -9,10 +9,6 @@
   position: relative;
   display: flex;
   gap: 16px;
-
-  @media screen and (min-width: 1024px) {
-    display: none;
-  }
 }
 .lang_selector_wrapper_desc {
   display: none;
@@ -27,7 +23,7 @@
   cursor: pointer;
   border: none;
   background-color: transparent;
-  color: white;
+  color: var(--white_color);
   font-family: Roboto, sans-serif;
   text-transform: uppercase;
   padding: 8px 24px 8px 4px;
@@ -47,7 +43,7 @@
 
 .lang_option {
   padding: 8px 16px;
-  color: white;
+  color: var(--white_color);
   cursor: pointer;
   // transition: background 0.2s;
 
@@ -57,13 +53,13 @@
 }
 
 .cartIcon {
-  fill: white;
-  stroke: white;
+  fill: var(--white_color);
 }
+
 .wrapper_mobile_icon {
   pointer-events: none;
   position: absolute;
-  right: -8px;
+  right: -4px;
   top: 3px;
 }
 

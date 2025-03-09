@@ -2,8 +2,8 @@
 
 .header {
   background-color: var(--header_bgc);
-  padding-top: 5px;
-  padding-bottom: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   position: relative;
   color: var(--main_text_color);
 }
@@ -21,7 +21,13 @@
   margin-right: 48px;
   position: relative;
   z-index: 40;
-  color: var(--white_text_color);
+  color: var(--white_color);
+  transition: transform 255ms linear, scale 255ms linear;
+
+  &:hover {
+    transform: rotate(0.01turn);
+    scale: 1.1;
+  }
 
   @media screen and (min-width: 1024px) {
     margin-right: 70px;
@@ -54,4 +60,24 @@
   @media screen and (min-width: 768px) {
     display: block;
   }
+}
+
+.navLink {
+  color: var(--white_color);
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  transition: color 255ms linear, scale 255ms linear;
+  display: inline-block;
+
+  &:hover,
+  &:focus {
+    color: aqua;
+    scale: 1.1;
+  }
+}
+
+.nav_link.active {
+  color: #ff5722; /* Цвет активной ссылки */
+  font-weight: bold;
+  border-bottom: 2px solid #ff5722;
 }

@@ -5,7 +5,7 @@
   top: 0;
   bottom: 0;
   width: 100%;
-  background-color: #e71b1b;
+  background-color: var(--background);
   transition: transform 255ms linear;
   padding-top: 70px;
   padding-left: 16px;
@@ -44,7 +44,7 @@
     display: block;
     width: 100%;
     height: 3px;
-    background-color: #ffffff;
+    background-color: var(--white_color);
     transition: all 0.3s ease-in-out;
     border-radius: 2px;
   }
@@ -77,7 +77,7 @@
 .serviceBlock {
   position: relative;
   display: flex;
-  border: 1px solid var(--white_text_color);
+  border: 1px solid var(--white_color);
   border-radius: 15px;
   padding: 10px;
   justify-content: space-around;
@@ -89,7 +89,7 @@
   left: 50%;
   transform: translateX(-50%);
   width: 1px;
-  background-color: #fff;
+  background-color: var(--white_color);
   height: 100%;
 }
 
@@ -101,7 +101,7 @@
 .navLink {
   font-size: 26px;
   display: inline-block;
-  color: var(--white_text_color);
+  color: var(--white_color);
   padding: 10px 0;
 }
 
@@ -118,10 +118,9 @@
 }
 
 .contactLink {
-  color: var(--white_text_color);
+  color: var(--white_color);
   font-size: 20px;
   display: inline-block;
-  color: var(--white_text_color);
   padding: 10px 0;
 }
 .socialList {
@@ -130,12 +129,12 @@
   gap: 15px;
 }
 .socialIcon {
-  fill: #ffffff;
+  fill: var(--white_color);
 }
 
 .socialLink {
   display: inline-block;
-  fill: #ffffff;
+  fill: var(--white_color);
 
   & svg {
     width: 54px;

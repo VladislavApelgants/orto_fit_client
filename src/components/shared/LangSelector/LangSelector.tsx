@@ -51,7 +51,7 @@ export const LangSelector: React.FC = () => {
         </span>
       </div>
 
-      {/*Планшет/Десктоп версия*/}
+      {/* Планшет/Десктоп версия
       <div className={s.lang_selector_wrapper_desc}>
         {ALL_LANGUAGES.map((lang, index) => (
           <button
@@ -67,7 +67,7 @@ export const LangSelector: React.FC = () => {
             )}
           </button>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 };

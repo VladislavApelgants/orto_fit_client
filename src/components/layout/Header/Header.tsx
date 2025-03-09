@@ -15,7 +15,7 @@ export const Header = async (): Promise<JSX.Element> => {
             <Link href="/" className={s.header_logo}>
               MaryOrtoFit
             </Link>
-            <Nav navClass={s.nav_block} />
+            <Nav navClass={s.nav_block} navLink={s.navLink} />
             <MobileMenu />
           </div>
           <div className={s.header_service_block}>
