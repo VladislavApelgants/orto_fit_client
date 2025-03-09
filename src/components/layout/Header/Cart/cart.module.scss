@@ -1,14 +1,13 @@
 .cart_btn {
   background-color: transparent;
   border-color: transparent;
-  cursor:pointer
+  cursor: pointer;
 }
 
 .icon_cart {
-  fill: #7a6565;
+  fill: #ffffff;
 
   &:hover {
     fill: red;
   }
 }
-

@@ -2,6 +2,9 @@
 .selector_wrapper {
   width: max-content;
 }
+.lang_selector_container {
+  position: relative;
+}
 .lang_selector_wrapper_mobile {
   position: relative;
   display: flex;
@@ -21,22 +24,47 @@
   }
 }
 .lang_selector {
-  display: block;
   cursor: pointer;
-  appearance: none;
   border: none;
   background-color: transparent;
-  padding: 0 32px 0 0;
+  color: white;
   font-family: Roboto, sans-serif;
   text-transform: uppercase;
-  color: black;
+  padding: 8px 24px 8px 4px;
 }
 
+.lang_options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7); // Прозрачный тёмный фон
+  backdrop-filter: blur(5px); // Размытие фона
+  border-radius: 8px;
+  padding: 4px 0;
+  z-index: 10;
+}
+
+.lang_option {
+  padding: 8px 16px;
+  color: white;
+  cursor: pointer;
+  // transition: background 0.2s;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+}
+
+.cartIcon {
+  fill: white;
+  stroke: white;
+}
 .wrapper_mobile_icon {
   pointer-events: none;
   position: absolute;
-  right: 2px;
-  top:-4px;
+  right: -8px;
+  top: 3px;
 }
 
 .desc_btn {

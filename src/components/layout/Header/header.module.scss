@@ -8,12 +8,6 @@
   color: var(--main_text_color);
 }
 
-.contacts_block {
-  @include flex();
-  margin-bottom: 24px;
-  background-color: #736d6d;
-}
-
 .header_wrapper {
   @include flex();
   flex-direction: row;
@@ -25,6 +19,9 @@
   font-weight: 500;
   font-size: 32px;
   margin-right: 48px;
+  position: relative;
+  z-index: 40;
+  color: var(--white_text_color);
 
   @media screen and (min-width: 1024px) {
     margin-right: 70px;

@@ -1,42 +1,50 @@
-import Image from "next/image";
+import { Icon } from "@/components/ui/Icon/Icon";
 import Link from "next/link";
 import React, { FC } from "react";
-import s from "./socialBlock.module.scss";
+type SocialBlockTypes = {
+  list?: string;
+  items?: string;
+  link?: string;
+  icon?: string;
+  size?: string;
+};
 
-export const SocialBlock: FC = (): React.JSX.Element => {
+export const SocialBlock: FC<SocialBlockTypes> = ({
+  list,
+  link,
+  items,
+  icon,
+}): React.JSX.Element => {
   return (
-    <ul className={s.social_block}>
-      <li>
-        <Link href={"https://www.instagram.com"} className={s.social_link}>
-          <Image
-            src="/social/insta.svg"
-            alt="instagram"
-            width={28}
-            height={28}
-          />
+    <ul className={list}>
+      <li className={items}>
+        <Link
+          href={"https://www.instagram.com"}
+          className={link}
+          target="_blank"
+          rel="noopener norefferer nofollow"
+        >
+          <Icon type="instagram" height={28} width={28} classnames={icon} />
         </Link>
       </li>
-      <li>
+      <li className={items}>
         <Link
           href={"https://www.youtube.com/@chtoToTamCahnnel"}
-          className={s.social_link}
+          className={link}
+          target="_blank"
+          rel="noopener norefferer nofollow"
         >
-          <Image
-            src="/social/youtube.svg"
-            alt="youtube"
-            width={28}
-            height={28}
-          />
+          <Icon type="youtube" height={28} width={28} classnames={icon} />
         </Link>
       </li>
-      <li>
-        <Link href={"https://www.facebook.com"} className={s.social_link}>
-          <Image
-            src="/social/facebook.svg"
-            alt="youtube"
-            width={28}
-            height={28}
-          />
+      <li className={items}>
+        <Link
+          href={"https://www.facebook.com"}
+          className={link}
+          target="_blank"
+          rel="noopener norefferer nofollow"
+        >
+          <Icon type="facebook" height={28} width={28} classnames={icon} />
         </Link>
       </li>
     </ul>

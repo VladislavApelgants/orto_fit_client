@@ -1,6 +1,11 @@
 "use client";
 
+import { ContactsBlock } from "@/components/services/components/ContactsBlock/ContactsBlock";
+import { SocialBlock } from "@/components/services/components/SocialBlock/SocialBlock";
+import { LangSelector } from "@/components/shared/LangSelector/LangSelector";
 import { useState } from "react";
+import { Cart } from "../Cart/Cart";
+import { Nav } from "../Nav/Nav";
 import s from "./mobMenu.module.scss";
 
 export const MobileMenu = () => {
@@ -17,7 +22,6 @@ export const MobileMenu = () => {
         className={`${s.burger_btn} ${isOpen ? s.open : ""}`}
       >
         <span></span>
-        {/* <span></span> */}
         <span></span>
       </button>
       <div
@@ -25,7 +29,20 @@ export const MobileMenu = () => {
           isOpen ? s.openModal : s.closedModal
         }`}
       >
-        <nav className=""></nav>
+        <div className={s.serviceBlockWrapper}>
+          <div className={s.serviceBlock}>
+            <LangSelector />
+            <div className={s.separator}></div>
+            <Cart />
+          </div>
+        </div>
+        <Nav navList={s.navList} navLink={s.navLink} navClass={s.navClass} />
+        <ContactsBlock listClass={s.contactslList} linkClass={s.contactLink} />
+        <SocialBlock
+          list={s.socialList}
+          icon={s.socialIcon}
+          link={s.socialLink}
+        />
       </div>
     </>
   );

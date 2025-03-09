@@ -7,6 +7,14 @@
   width: 100%;
   background-color: #e71b1b;
   transition: transform 255ms linear;
+  padding-top: 70px;
+  padding-left: 16px;
+  padding-right: 16px;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
+    url("/hero.webp");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
   @media screen and (min-width: 768px) {
     display: none;
   }
@@ -58,5 +66,79 @@
 
   @media screen and (min-width: 768px) {
     display: none;
+  }
+}
+
+.serviceBlockWrapper {
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+.serviceBlock {
+  position: relative;
+  display: flex;
+  border: 1px solid var(--white_text_color);
+  border-radius: 15px;
+  padding: 10px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.separator {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  background-color: #fff;
+  height: 100%;
+}
+
+.navList {
+  flex-direction: column;
+  gap: 15px;
+}
+
+.navLink {
+  font-size: 26px;
+  display: inline-block;
+  color: var(--white_text_color);
+  padding: 10px 0;
+}
+
+.navClass {
+  margin-bottom: 48px;
+}
+
+.contactslList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.contactLink {
+  color: var(--white_text_color);
+  font-size: 20px;
+  display: inline-block;
+  color: var(--white_text_color);
+  padding: 10px 0;
+}
+.socialList {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.socialIcon {
+  fill: #ffffff;
+}
+
+.socialLink {
+  display: inline-block;
+  fill: #ffffff;
+
+  & svg {
+    width: 54px;
+    height: 54px;
   }
 }

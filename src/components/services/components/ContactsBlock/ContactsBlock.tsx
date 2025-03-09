@@ -1,15 +1,25 @@
 import Link from "next/link";
 import { FC } from "react";
-import s from "./contactsBlock.module.scss";
+type ContactsBlockTypes = {
+  listClass?: string;
+  linkClass?: string;
+};
 
-export const ContactsBlock: FC = (): React.JSX.Element => {
+export const ContactsBlock: FC<ContactsBlockTypes> = ({
+  listClass,
+  linkClass,
+}): React.JSX.Element => {
   return (
-    <ul className={s.contacts_block}>
+    <ul className={listClass}>
       <li>
-        <Link href={"/"}>Call Us: +1 213 974-5898</Link>
+        <Link href={"/"} className={linkClass}>
+          Call Us: +38 (099) 234-09-86
+        </Link>
       </li>
       <li>
-        <Link href={"/"}>Email:toystore@template.com</Link>
+        <Link href={"/"} className={linkClass}>
+          Email:toystore@template.com
+        </Link>
       </li>
     </ul>
   );
