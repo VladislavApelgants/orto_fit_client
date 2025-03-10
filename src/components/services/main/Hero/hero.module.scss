@@ -1,0 +1,48 @@
+.hero_section {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/hero.webp");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: aquamarine;
+  padding: 166px 0;
+}
+
+.info_block {
+  padding: 55px 54px;
+  background: rgba(14, 115, 100, 0.6);
+  max-width: 570px;
+  margin: 0 auto;
+  border-radius: 16px;
+  text-align: center;
+}
+.subtitle {
+  font-family: var(--font-montserrat);
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--aboveHeader_bgc);
+  margin-bottom: 17px;
+}
+.hero_title {
+  font-family: var(--font-montserrat);
+  font-size: 39px;
+  line-height: 1.23;
+  color: var(--white_color);
+  margin-bottom: 20px;
+}
+
+.hero_link {
+  background-color: var(--aboveHeader_bgc);
+  padding: 12px 28px;
+  border-radius: 24px;
+  line-height: 1.71;
+  display: inline-block;
+  transition: color var(--main_hover_transition),
+    background-color var(--main_hover_transition);
+
+  &:hover,
+  &:focus {
+    background-color: var(--white_color);
+    color: var(--text_hover_color);
+  }
+}
