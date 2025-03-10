@@ -5,7 +5,7 @@ const apiKey = process.env.NEXT_PUBLIC_TOLGEE_API_KEY;
 const apiUrl = process.env.NEXT_PUBLIC_TOLGEE_API_URL;
 
 export async function getStaticData(languages: string[]) {
-  const result: Record<string, any> = {};
+  const result: Record<string, Record<string, unknown>> = {};
   for (const lang of languages) {
     if (ALL_LANGUAGES.includes(lang)) {
       for (const ns of NAMESPACES) {
