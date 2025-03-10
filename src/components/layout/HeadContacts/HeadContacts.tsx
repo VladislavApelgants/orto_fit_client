@@ -8,7 +8,10 @@ export const HeadContacts = (): React.JSX.Element => {
     <div className={s.head_contacts}>
       <div className={`container`}>
         <div className={s.contacts_block}>
-          <ContactsBlock listClass={s.contacts_list} />
+          <ContactsBlock
+            listClass={s.contacts_list}
+            linkClass={s.contact_link}
+          />
           <SocialBlock list={s.social_block} link={s.socialLink} />
         </div>
       </div>

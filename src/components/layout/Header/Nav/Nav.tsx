@@ -21,7 +21,6 @@ export const Nav: FC<NavTypes> = ({
 }): JSX.Element => {
   const { t } = useTranslate();
   const pathname = usePathname();
-  console.log("😎 ~ pathname:", pathname);
 
   return (
     <nav className={navClass}>
@@ -33,7 +32,7 @@ export const Nav: FC<NavTypes> = ({
             pathname === "/" ? s.active : null
           )}
         >
-          <Link href="/" className={clsx(s.nav_link, navLink)}>
+          <Link href="/" className={clsx(navLink)}>
             {t("header.homeLink")}
           </Link>
         </li>
@@ -44,7 +43,7 @@ export const Nav: FC<NavTypes> = ({
             pathname === "/products" ? s.active : null
           )}
         >
-          <Link href="/products" className={clsx(s.nav_link, navLink)}>
+          <Link href="/products" className={clsx(navLink)}>
             {t("header.products")}
           </Link>
         </li>
@@ -55,7 +54,7 @@ export const Nav: FC<NavTypes> = ({
             pathname === "/about_us" ? s.active : null
           )}
         >
-          <Link href="/about_us" className={clsx(s.nav_link, navLink)}>
+          <Link href="/about_us" className={clsx(navLink)}>
             О нас
           </Link>
         </li>
@@ -66,7 +65,7 @@ export const Nav: FC<NavTypes> = ({
             pathname === "/delivery" ? s.active : null
           )}
         >
-          <Link href="/delivery" className={clsx(s.nav_link, navLink)}>
+          <Link href="/delivery" className={clsx(navLink)}>
             Доставка
           </Link>
         </li>
@@ -77,7 +76,7 @@ export const Nav: FC<NavTypes> = ({
             pathname === "/contacts" ? s.active : null
           )}
         >
-          <Link href="/contacts" className={clsx(s.nav_link, navLink)}>
+          <Link href="/contacts" className={clsx(navLink)}>
             {t("header.contacts")}
           </Link>
         </li>

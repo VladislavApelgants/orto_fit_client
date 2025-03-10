@@ -50,24 +50,6 @@ export const LangSelector: React.FC = () => {
           <Icon type="lang" width={24} height={24} classnames={s.cartIcon} />
         </span>
       </div>
-
-      {/* Планшет/Десктоп версия
-      <div className={s.lang_selector_wrapper_desc}>
-        {ALL_LANGUAGES.map((lang, index) => (
-          <button
-            key={lang}
-            onClick={() => handleLangChange(lang)}
-            className={s.desc_btn}
-            value={lang}
-          >
-            {lang}
-            {selectedLang === lang && <span className={s.selected_lang}></span>}
-            {index < ALL_LANGUAGES.length - 1 && (
-              <Icon type="langDot" width={5} height={5} />
-            )}
-          </button>
-        ))}
-      </div> */}
     </div>
   );
 };

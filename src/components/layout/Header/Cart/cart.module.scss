@@ -2,12 +2,13 @@
   background-color: transparent;
   border-color: transparent;
   cursor: pointer;
+
+  &:hover .icon_cart {
+    fill: var(--text_hover_color);
+  }
 }
 
 .icon_cart {
   fill: #ffffff;
-
-  &:hover {
-    fill: red;
-  }
+  transition: fill 255ms linear;
 }

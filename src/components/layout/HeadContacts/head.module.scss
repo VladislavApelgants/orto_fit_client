@@ -15,6 +15,14 @@
   @include flex();
   gap: 16px;
 }
+.contact_link {
+  color: var(--white_color);
+  transition: color var(--main_hover_transition);
+  &:hover,
+  &:focus {
+    color: var(--text_hover_color);
+  }
+}
 
 .social_block {
   display: none;
@@ -27,10 +35,17 @@
 
 .socialLink {
   display: inline-block;
-  fill: #ffffff;
+  fill: var(--wite_color);
+  transition: color var(--main_hover_transition);
 
   & svg {
     width: 32px;
     height: 32px;
+    fill: currentColor;
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--text_hover_color);
   }
 }

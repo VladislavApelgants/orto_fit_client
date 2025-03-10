@@ -18,19 +18,25 @@
   letter-spacing: 0.02em;
   font-weight: 500;
   font-size: 32px;
-  margin-right: 48px;
   position: relative;
   z-index: 40;
   color: var(--white_color);
-  transition: transform 255ms linear, scale 255ms linear;
+  transition: transform var(--main_hover_transition),
+    scale var(--main_hover_transition);
 
   &:hover {
     transform: rotate(0.01turn);
     scale: 1.1;
   }
 
+  @media screen and (min-width: 768px) {
+    margin-right: 30px;
+  }
   @media screen and (min-width: 1024px) {
     margin-right: 70px;
+  }
+  @media screen and (min-width: 1280px) {
+    font-size: 36px;
   }
 }
 
@@ -66,18 +72,22 @@
   color: var(--white_color);
   font-size: 14px;
   letter-spacing: 0.03em;
-  transition: color 255ms linear, scale 255ms linear;
+  line-height: 1.1;
+  transition: color var(--main_hover_transition),
+    scale var(--main_hover_transition);
   display: inline-block;
 
   &:hover,
   &:focus {
-    color: aqua;
+    color: var(--text_hover_color);
     scale: 1.1;
   }
-}
 
-.nav_link.active {
-  color: #ff5722; /* Цвет активной ссылки */
-  font-weight: bold;
-  border-bottom: 2px solid #ff5722;
+  @media screen and (min-width: 1024px) {
+    font-size: 16px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 18px;
+  }
 }
