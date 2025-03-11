@@ -1,0 +1,58 @@
+.footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid var(--white_color);
+}
+
+.footer_logo {
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+  font-size: 32px;
+  position: relative;
+  z-index: 40;
+  color: var(--white_color);
+  transition: transform var(--main_hover_transition),
+    scale var(--main_hover_transition);
+
+  &:hover {
+    transform: rotate(0.01turn);
+    scale: 1.1;
+  }
+}
+
+.footer_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-bottom: 24px;
+}
+
+.social_block {
+  display: none;
+  gap: 16px;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+}
+
+.socialLink {
+  display: inline-block;
+  fill: var(--wite_color);
+  transition: color var(--main_hover_transition);
+
+  & svg {
+    width: 32px;
+    height: 32px;
+    fill: currentColor;
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--text_hover_color);
+  }
+}

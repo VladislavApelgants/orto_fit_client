@@ -23,12 +23,16 @@
   color: var(--aboveHeader_bgc);
   margin-bottom: 17px;
 }
+
 .hero_title {
   font-family: var(--font-montserrat);
-  font-size: 39px;
+  font-size: 30px;
   line-height: 1.23;
   color: var(--white_color);
   margin-bottom: 20px;
+  @media screen and (min-width: 768px) {
+    font-size: 39px;
+  }
 }
 
 .hero_link {

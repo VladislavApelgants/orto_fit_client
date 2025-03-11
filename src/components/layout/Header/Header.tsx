@@ -1,6 +1,6 @@
 import { Cart } from "@/components/layout/Header/Cart/Cart";
+import { Logo } from "@/components/services/components/Logo/Logo";
 import { LangSelector } from "@/components/shared/LangSelector/LangSelector";
-import Link from "next/link";
 import { JSX } from "react";
 import s from "./header.module.scss";
 import { MobileMenu } from "./MobMenu/MobMenu";
@@ -12,9 +12,7 @@ export const Header = async (): Promise<JSX.Element> => {
       <div className={`container`}>
         <div className={s.header_wrapper}>
           <div className={s.header_nav_block}>
-            <Link href="/" className={s.header_logo}>
-              MaryOrtoFit
-            </Link>
+            <Logo logoClass={s.header_logo} />
             <Nav navClass={s.nav_block} navLink={s.navLink} />
             <MobileMenu />
           </div>

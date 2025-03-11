@@ -12,7 +12,7 @@ export const HeadContacts = (): React.JSX.Element => {
             listClass={s.contacts_list}
             linkClass={s.contact_link}
           />
-          <SocialBlock list={s.social_block} link={s.socialLink} />
+          <SocialBlock listClass={s.social_block} linkClass={s.socialLink} />
         </div>
       </div>
     </div>
