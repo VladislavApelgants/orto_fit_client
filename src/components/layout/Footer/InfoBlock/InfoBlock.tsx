@@ -6,19 +6,34 @@ export const InfoBlock = (): JSX.Element => {
   return (
     <ul className={s.info_list}>
       <li>
-        <Link href={"/"}> Про нас</Link>
+        <Link href={"/"} className={s.info_link}>
+          {" "}
+          Про нас
+        </Link>
       </li>
       <li>
-        <Link href={"/"}> Доставка і оплата</Link>
+        <Link href={"/"} className={s.info_link}>
+          {" "}
+          Доставка і оплата
+        </Link>
       </li>
       <li>
-        <Link href={"/"}> Політика безпеки</Link>
+        <Link href={"/"} className={s.info_link}>
+          {" "}
+          Політика безпеки
+        </Link>
       </li>
       <li>
-        <Link href={"/"}> Умови повернення та обміну</Link>
+        <Link href={"/"} className={s.info_link}>
+          {" "}
+          Умови повернення та обміну
+        </Link>
       </li>
       <li>
-        <Link href={"/"}> Договір Публічної Оферти</Link>
+        <Link href={"/"} className={s.info_link}>
+          {" "}
+          Договір Публічної Оферти
+        </Link>
       </li>
     </ul>
   );

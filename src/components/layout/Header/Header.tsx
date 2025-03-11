@@ -13,7 +13,11 @@ export const Header = async (): Promise<JSX.Element> => {
         <div className={s.header_wrapper}>
           <div className={s.header_nav_block}>
             <Logo logoClass={s.header_logo} />
-            <Nav navClass={s.nav_block} navLink={s.navLink} />
+            <Nav
+              navClass={s.nav_block}
+              navLink={s.navLink}
+              navList={s.navList}
+            />
             <MobileMenu />
           </div>
           <div className={s.header_service_block}>

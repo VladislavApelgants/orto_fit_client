@@ -63,9 +63,13 @@
 
 .nav_block {
   display: none;
+
   @media screen and (min-width: 768px) {
     display: block;
   }
+}
+.navList {
+  gap: 24px;
 }
 
 .navLink {

@@ -1,0 +1,8 @@
+.contact_link {
+  color: var(--white_color);
+  transition: color var(--main_hover_transition);
+  &:hover,
+  &:focus {
+    color: var(--text_hover_color);
+  }
+}

@@ -11,7 +11,7 @@ export const Footer = () => {
       <div className="container">
         <div className={s.footer_wrapper}>
           <Logo logoClass={s.footer_logo} />
-          <Nav />
+          <Nav navList={s.navList} navLink={s.navLink} />
           <SocialBlock listClass={s.social_block} linkClass={s.socialLink} />
           <Address />
         </div>
