@@ -18,6 +18,7 @@
   transition: color var(--main_hover_transition),
     scale var(--main_hover_transition);
   display: inline-block;
+
   &:hover,
   &:focus {
     color: var(--text_hover_color);

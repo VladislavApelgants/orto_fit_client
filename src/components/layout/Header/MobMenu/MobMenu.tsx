@@ -39,9 +39,9 @@ export const MobileMenu = () => {
         <Nav navList={s.navList} navLink={s.navLink} navClass={s.navClass} />
         <ContactsBlock listClass={s.contactslList} linkClass={s.contactLink} />
         <SocialBlock
-          list={s.socialList}
-          icon={s.socialIcon}
-          link={s.socialLink}
+          listClass={s.socialList}
+          iconClass={s.socialIcon}
+          linkClass={s.socialLink}
         />
       </div>
     </>
