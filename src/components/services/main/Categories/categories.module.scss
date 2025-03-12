@@ -1,0 +1,111 @@
+.category_section {
+  padding-top: 120px;
+  padding-bottom: 60px;
+  position: relative;
+}
+.categories_list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px 32px;
+}
+
+.categories_item {
+  width: 100%;
+  max-width: 570px;
+  position: relative;
+  background-color: var(--wiolet_color);
+  border-radius: 16px;
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 32px) / 2);
+  }
+
+  &:nth-child(2n-1) {
+    padding: 200px 16px 32px 16px;
+    @media screen and (min-width: 1024px) {
+      padding: 48px 54px 48px 22px;
+    }
+    @media screen and (min-width: 1280px) {
+      padding: 48px 86px 48px 22px;
+    }
+  }
+
+  &:nth-child(2n) {
+    padding: 200px 16px 32px 16px;
+    @media screen and (min-width: 1024px) {
+      padding: 48px 22px 48px 54px;
+    }
+    @media screen and (min-width: 1280px) {
+      padding: 48px 22px 48px 86px;
+    }
+  }
+
+  &:nth-child(2n-1) .categories_image {
+    top: -48px;
+    left: 50%;
+
+    @media screen and (max-width: 1023px) {
+      transform: translateX(-50%);
+    }
+    @media screen and (min-width: 1024px) {
+      left: 20px;
+    }
+  }
+
+  &:nth-child(2n) .categories_image {
+    top: -48px;
+    right: 50%;
+    @media screen and (max-width: 1023px) {
+      transform: translateX(50%);
+    }
+    @media screen and (min-width: 1024px) {
+      right: 20px;
+    }
+  }
+
+  &:nth-child(2n-1) .info_block {
+    @media screen and (max-width: 1023px) {
+      margin: 0 auto;
+      text-align: center;
+    }
+    margin-left: auto;
+  }
+  &:nth-child(2n) .info_block {
+    @media screen and (max-width: 1023px) {
+      margin: 0 auto;
+      text-align: center;
+    }
+    margin-right: auto;
+  }
+}
+
+.categories_image {
+  position: absolute;
+}
+
+.info_block {
+  width: max-content;
+}
+
+.card_itle {
+  font-size: 27px;
+  line-height: 1.33;
+  margin-bottom: 16px;
+}
+
+.card_link {
+  display: inline-block;
+  width: max-content;
+  padding: 8px 24px;
+  font-size: 13px;
+  line-height: 1.84;
+  background-color: var(--white_color);
+  border-radius: 20px;
+  color: var(--main_text_color);
+  @media screen and (min-width: 1024px) {
+    display: block;
+    left: 20px;
+    margin-left: auto;
+  }
+}
