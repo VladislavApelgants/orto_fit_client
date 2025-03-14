@@ -1,0 +1,38 @@
+.section {
+  padding: 60px 0;
+}
+.head_block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+.product_block {
+  padding-top: 40px;
+  border-top: 2px solid var(--wiolet_color);
+}
+.section_title {
+  font-size: 36px;
+  line-height: 1.28;
+  color: var(--main_text_color);
+}
+
+.arrow_icon {
+  margin-left: 4px;
+}
+
+.more_link {
+  fill: var(--main_text_color);
+  border-bottom: 2px solid var(--main_text_color);
+  padding: 4px 0;
+  transition: fill var(--main_hover_transition),
+    color var(--main_hover_transition),
+    border-color var(--main_hover_transition);
+
+  &:hover,
+  &:focus {
+    fill: var(--header_bgc);
+    color: var(--text_hover_color);
+    border-color: var(--header_bgc);
+  }
+}

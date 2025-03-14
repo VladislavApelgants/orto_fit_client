@@ -1,6 +1,8 @@
 import { Icon } from "@/components/ui/Icon/Icon";
+import clsx from "clsx";
 import Link from "next/link";
 import React, { FC } from "react";
+import s from "./socialBlock.module.scss";
 type SocialBlockTypes = {
   listClass?: string;
   itemClass?: string;
@@ -27,28 +29,38 @@ export const SocialBlock: FC<SocialBlockTypes> = ({
             type="instagram"
             height={28}
             width={28}
-            classnames={iconClass}
+            classnames={clsx(s.icon, iconClass)}
           />
         </Link>
       </li>
       <li className={itemClass}>
         <Link
           href={"https://www.youtube.com/@chtoToTamCahnnel"}
-          className={linkClass}
+          className={clsx(s.link, linkClass)}
           target="_blank"
           rel="noopener norefferer nofollow"
         >
-          <Icon type="youtube" height={28} width={28} classnames={iconClass} />
+          <Icon
+            type="youtube"
+            height={28}
+            width={28}
+            classnames={clsx(s.icon, iconClass)}
+          />
         </Link>
       </li>
       <li className={itemClass}>
         <Link
           href={"https://www.facebook.com"}
-          className={linkClass}
+          className={clsx(s.link, linkClass)}
           target="_blank"
           rel="noopener norefferer nofollow"
         >
-          <Icon type="facebook" height={28} width={28} classnames={iconClass} />
+          <Icon
+            type="facebook"
+            height={28}
+            width={28}
+            classnames={clsx(s.icon, iconClass)}
+          />
         </Link>
       </li>
     </ul>
