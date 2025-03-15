@@ -16,7 +16,7 @@ export type mockDataMatsType = {
   sizeElem: SizeType;
   weight: string;
   manufacturer: string;
-  configuration: string;
+  configuration: number;
   reviews: string[];
   availability: boolean;
   piecesLeft: number;
@@ -24,7 +24,7 @@ export type mockDataMatsType = {
 
 export const mockDataMats = [
   {
-    id: String(Math.random() + Date.now()),
+    id: String(Math.random() + Date.now() + Math.random()),
     presentImage: "/categories/wooden2.png",
     images: [],
     title: "Wooden Toy 2",
@@ -37,13 +37,13 @@ export const mockDataMats = [
     sizeElem: { width: 27, height: 27 },
     weight: "2kg",
     manufacturer: "Ortek",
-    configuration: "12",
+    configuration: 12,
     reviews: [],
     availability: true,
     piecesLeft: 5,
   },
   {
-    id: String(Math.random() + Date.now()),
+    id: String(Math.random() + Date.now() + Math.random()),
     presentImage: "/categories/wooden.png",
     images: [],
     title: "Wooden Toy 2",
@@ -56,13 +56,13 @@ export const mockDataMats = [
     sizeElem: { width: 27, height: 27 },
     weight: "2kg",
     manufacturer: "Ortek",
-    configuration: "12",
+    configuration: 12,
     reviews: [],
     availability: true,
     piecesLeft: 5,
   },
   {
-    id: String(Math.random() + Date.now()),
+    id: String(Math.random() + Date.now() + Math.random()),
     presentImage: "/categories/wooden2.png",
     images: [],
     title: "Wooden Toy 2",
@@ -75,13 +75,13 @@ export const mockDataMats = [
     sizeElem: { width: 27, height: 27 },
     weight: "2kg",
     manufacturer: "Ortek",
-    configuration: "12",
+    configuration: 12,
     reviews: [],
     availability: true,
     piecesLeft: 5,
   },
   {
-    id: String(Math.random() + Date.now()),
+    id: String(Math.random() + Date.now() + Math.random()),
     presentImage: "/categories/wooden.png",
     images: [],
     title: "Wooden Toy 2",
@@ -94,7 +94,45 @@ export const mockDataMats = [
     sizeElem: { width: 27, height: 27 },
     weight: "2kg",
     manufacturer: "Ortek",
-    configuration: "12",
+    configuration: 12,
+    reviews: [],
+    availability: true,
+    piecesLeft: 5,
+  },
+  {
+    id: String(Math.random() + Date.now() + Math.random()),
+    presentImage: "/categories/wooden.png",
+    images: [],
+    title: "Wooden Toy 2",
+    description: "Some Data",
+    category: "wooden",
+    price: 2600,
+    type: "Игрушки",
+    material: "",
+    color: "",
+    sizeElem: { width: 27, height: 27 },
+    weight: "2kg",
+    manufacturer: "Ortek",
+    configuration: 12,
+    reviews: [],
+    availability: true,
+    piecesLeft: 5,
+  },
+  {
+    id: String(Math.random() + Date.now() + Math.random()),
+    presentImage: "/categories/wooden.png",
+    images: [],
+    title: "Wooden Toy 2",
+    description: "Some Data",
+    category: "wooden",
+    price: 2600,
+    type: "Игрушки",
+    material: "",
+    color: "",
+    sizeElem: { width: 27, height: 27 },
+    weight: "2kg",
+    manufacturer: "Ortek",
+    configuration: 12,
     reviews: [],
     availability: true,
     piecesLeft: 5,

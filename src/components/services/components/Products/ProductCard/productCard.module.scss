@@ -1,6 +1,40 @@
 .item {
   background-color: var(--white_color);
   color: var(--main_text_color);
-  padding: 24px 12px;
   border-radius: 10px;
+}
+.item_link {
+  display: block;
+  padding: 24px 12px;
+}
+
+.item_info_block {
+  padding: 10px 15px;
+  border-top: 1px solid var(--header_bgc);
+}
+
+.item_title {
+  font-size: 18px;
+  line-height: 1.42;
+  margin-bottom: 12px;
+}
+
+.item_count {
+  margin-bottom: 4px;
+}
+
+.item_price {
+  margin-bottom: 12px;
+}
+
+.item_button {
+  padding: 8px 15px;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--header_bgc);
+  transition: background-color var(--main_hover_transition);
+  &:hover,
+  &:focus {
+    background-color: var(--wiolet_color);
+  }
 }

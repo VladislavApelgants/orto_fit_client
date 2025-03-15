@@ -65,23 +65,24 @@
   }
 
   &:nth-child(2n-1) .info_block {
+    margin-left: auto;
     @media screen and (max-width: 1023px) {
       margin: 0 auto;
       text-align: center;
     }
-    margin-left: auto;
   }
   &:nth-child(2n) .info_block {
+    margin-right: auto;
     @media screen and (max-width: 1023px) {
       margin: 0 auto;
       text-align: center;
     }
-    margin-right: auto;
   }
 }
 
 .categories_image {
   position: absolute;
+  max-width: 220px;
 }
 
 .info_block {

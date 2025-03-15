@@ -1,0 +1,25 @@
+.top_products .swiper {
+  overflow: visible;
+}
+.top_products .container {
+  overflow: hidden;
+}
+.top_products .swiper-pagination {
+  top: -42px;
+}
+
+.top_products .swiper-slide {
+  @media screen and (max-width: 767px) {
+    max-width: 290px;
+  }
+}
+.top_products .swiper-button-prev.swiper-button-disabled,
+.top_products .swiper-button-next.swiper-button-disabled {
+  opacity: 0;
+}
+
+.top_products
+  .swiper-pagination-progressbar
+  .swiper-pagination-progressbar-fill {
+  background-color: var(--wiolet_color);
+}

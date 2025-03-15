@@ -1,9 +1,11 @@
 import { Icon } from "@/components/ui/Icon/Icon";
 import { mockDataMats } from "@/utils/mockDataMats";
 import { mockDataToys } from "@/utils/mockDataToys";
+import clsx from "clsx";
 import Link from "next/link";
 import { FC, JSX } from "react";
 import { ProductsList } from "../../components/Products/ProductsList/ProductsList";
+import "./swiperStyle.scss";
 import s from "./topProducts.module.scss";
 
 type TopProductsTypes = {
@@ -16,7 +18,7 @@ export const TopProducts: FC<TopProductsTypes> = ({
 }): JSX.Element => {
   const data = contentFlag === "fit" ? mockDataMats : mockDataToys;
   return (
-    <section className={s.section}>
+    <section className={clsx(s.section, "top_products")}>
       <div className="container">
         <div className={s.head_block}>
           <h2 className={s.section_title}>{title}</h2>

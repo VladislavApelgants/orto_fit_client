@@ -16,7 +16,7 @@ export type mockDatamockDataToysType = {
   sizeElem: SizeType;
   weight: string;
   manufacturer: string;
-  configuration: string;
+  configuration: number;
   reviews: string[];
   availability: boolean;
   piecesLeft: number;
@@ -24,7 +24,7 @@ export type mockDatamockDataToysType = {
 
 export const mockDataToys = [
   {
-    id: String(Math.random() + Date.now()),
+    id: String(Math.random() + Date.now() + Math.random()),
     presentImage: "/categories/stuffed.png",
     images: [],
     title: "Toys stuffed 2",
@@ -37,13 +37,13 @@ export const mockDataToys = [
     sizeElem: { width: 27, height: 27 },
     weight: "2kg",
     manufacturer: "Ortek",
-    configuration: "12",
+    configuration: 12,
     reviews: [],
     availability: true,
     piecesLeft: 5,
   },
   {
-    id: String(Math.random() + Date.now()),
+    id: String(Math.random() + Date.now() + Math.random()),
     presentImage: "/categories/stuffed2.png",
     images: [],
     title: "Toys stuffed 2",
@@ -56,13 +56,13 @@ export const mockDataToys = [
     sizeElem: { width: 27, height: 27 },
     weight: "2kg",
     manufacturer: "Ortek",
-    configuration: "12",
+    configuration: 12,
     reviews: [],
     availability: true,
     piecesLeft: 5,
   },
   {
-    id: String(Math.random() + Date.now()),
+    id: String(Math.random() + Date.now() + Math.random()),
     presentImage: "/categories/stuffed.png",
     images: [],
     title: "Toys stuffed 2",
@@ -75,13 +75,13 @@ export const mockDataToys = [
     sizeElem: { width: 27, height: 27 },
     weight: "2kg",
     manufacturer: "Ortek",
-    configuration: "12",
+    configuration: 12,
     reviews: [],
     availability: true,
     piecesLeft: 5,
   },
   {
-    id: String(Math.random() + Date.now()),
+    id: String(Math.random() + Date.now() + Math.random()),
     presentImage: "/categories/stuffed2.png",
     images: [],
     title: "Toys stuffed 2",
@@ -94,7 +94,7 @@ export const mockDataToys = [
     sizeElem: { width: 27, height: 27 },
     weight: "2kg",
     manufacturer: "Ortek",
-    configuration: "12",
+    configuration: 12,
     reviews: [],
     availability: true,
     piecesLeft: 5,

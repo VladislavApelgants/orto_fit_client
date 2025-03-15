@@ -1,20 +1,30 @@
 .section {
   padding: 60px 0;
+  color: var(--main_text_color);
+
+  &:nth-child(2n-1) {
+    background-color: var(--header_bgc);
+    color: var(--white_color);
+  }
 }
+
 .head_block {
   display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 32px;
 }
+
 .product_block {
-  padding-top: 40px;
-  border-top: 2px solid var(--wiolet_color);
+  padding-top: 39px;
+  border-top: 2px solid rgba(0, 0, 0, 0.25);
 }
+
 .section_title {
   font-size: 36px;
   line-height: 1.28;
-  color: var(--main_text_color);
 }
 
 .arrow_icon {
