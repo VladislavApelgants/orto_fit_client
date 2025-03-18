@@ -1,0 +1,24 @@
+.health_section {
+  padding: 60px 0;
+  background-color: var(--header_bgc);
+}
+.content_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  //   justify-content: center;
+}
+.content_block {
+  max-width: 400px;
+}
+.health_title {
+  font-size: 36px;
+  line-height: 1.28;
+  margin-bottom: 32px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid white;
+}
+
+.health_text {
+  line-height: 1.5;
+}

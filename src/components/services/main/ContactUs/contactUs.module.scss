@@ -1,0 +1,58 @@
+.contactUs_section {
+  background: var(--wiolet_color);
+  padding: 10px 0;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+.contactUs_section .container {
+}
+.contactUs_title {
+  font-size: 36px;
+  line-height: 1.28;
+  //   color: black;
+  margin-bottom: 16px;
+  text-align: center;
+}
+.contactUs_text {
+  //   color: black;
+  font-size: 16px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+.messenger_list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  //   background-color: #ffffff;
+  padding: 10px 24px;
+  max-width: max-content;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.messenger_item {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px 24px;
+}
+.messenger_link {
+  display: block;
+  background-color: var(--header_bgc);
+  border-radius: 10px;
+  padding: 0 24px;
+  animation: tilt 1s infinite alternate ease-in-out;
+}
+.messenger_image {
+  width: 150px;
+}
+
+@keyframes tilt {
+  0% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}
