@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { FC } from "react";
 import s from "./HealthInfo.module.scss";
 
@@ -16,18 +17,35 @@ export const HealthInfo: FC = () => {
               увлекательными!
             </p>
           </div>
-          <div>
-            <iframe
-              width="100%"
-              height="315"
-              src="https://www.youtube.com/embed/2bM-wnAj1To"
-              title="YouTube video player"
-              //   frameBorder="0"
-              //   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
-              allowFullScreen
-              referrerPolicy="strict-origin-when-cross-origin"
-              loading="lazy"
-            />
+          <div className={s.media_wrapper_container}>
+            <div className={s.media_wrapper}>
+              <Image
+                src="/health/mats.jpg"
+                alt="mats"
+                width={500}
+                height={600}
+                className={s.mats}
+                loading="lazy"
+              />
+              <Image
+                src="/health/kidandmats.jpg"
+                alt="mats"
+                width={500}
+                height={600}
+                className={s.mats_kids}
+                loading="lazy"
+              />
+              <iframe
+                width="100%"
+                height="315"
+                src="https://www.youtube.com/embed/2bM-wnAj1To"
+                title="YouTube video player"
+                allowFullScreen
+                referrerPolicy="strict-origin-when-cross-origin"
+                loading="lazy"
+                className={s.video}
+              />
+            </div>
           </div>
         </div>
       </div>

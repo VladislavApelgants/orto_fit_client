@@ -6,10 +6,20 @@
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
-  //   justify-content: center;
+  @media screen and (max-width: 1023px) {
+    justify-content: center;
+  }
+  @media screen and (min-width: 1024px) {
+    justify-content: space-between;
+  }
 }
 .content_block {
-  max-width: 400px;
+  @media screen and (min-width: 1024px) {
+    max-width: 400px;
+  }
+  @media screen and (min-width: 1280px) {
+    max-width: 660px;
+  }
 }
 .health_title {
   font-size: 36px;
@@ -21,4 +31,61 @@
 
 .health_text {
   line-height: 1.5;
+}
+
+.media_wrapper {
+  position: relative;
+}
+.media_wrapper_container {
+  @media screen and (min-width: 768px) {
+    padding: 30px 210px;
+  }
+  @media screen and (min-width: 1024px) {
+    padding: 0 125px;
+  }
+}
+
+.mats {
+  position: absolute;
+  top: 0;
+  right: -158px;
+  width: 177px;
+  z-index: 2;
+  transform: rotate(28deg);
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  @media screen and (min-width: 768px) {
+    right: -158px;
+    width: 177px;
+  }
+  @media screen and (min-width: 1024px) {
+    right: -87px;
+    width: 150px;
+  }
+}
+.mats_kids {
+  position: absolute;
+  top: 0px;
+  left: -158px;
+  width: 177px;
+  z-index: 2;
+  transform: rotate(340deg);
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  @media screen and (min-width: 768px) {
+    left: -158px;
+    width: 177px;
+  }
+  @media screen and (min-width: 1024px) {
+    left: -100px;
+    width: 150px;
+  }
+}
+.video {
+  position: relative;
+  z-index: 10;
+  //   width: 400px;
+  height: 350px;
 }
