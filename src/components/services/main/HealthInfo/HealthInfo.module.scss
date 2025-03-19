@@ -31,6 +31,31 @@
 
 .health_text {
   line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+.product_link {
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.5;
+  display: block;
+  padding: 10px 16px;
+  background-color: #fff;
+  color: var(--main_text_color);
+  border-radius: 10px;
+  transition: background-color var(--main_hover_transition),
+    color var(--main_hover_transition);
+
+  @media screen and (min-width: 480px) {
+    width: max-content;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: var(--aboveHeader_bgc);
+    color: var(--white_color);
+  }
 }
 
 .media_wrapper {

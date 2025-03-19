@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { FC } from "react";
 import s from "./HealthInfo.module.scss";
 
@@ -16,6 +17,7 @@ export const HealthInfo: FC = () => {
               развивают координацию и делают ежедневные шаги малыша полезными и
               увлекательными!
             </p>
+            <Link href="" className={s.product_link}>Перейти к товару</Link>
           </div>
           <div className={s.media_wrapper_container}>
             <div className={s.media_wrapper}>
