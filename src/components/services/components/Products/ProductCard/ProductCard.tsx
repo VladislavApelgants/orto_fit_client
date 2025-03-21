@@ -33,7 +33,11 @@ export const ProductCard: FC<ProductCardType> = ({
             Кількість: {count} шт
           </p>
           <p className={clsx(s.item_text, s.item_price)}>Ціна: {price} грн</p>
-          <button type="button" className={s.item_button}>
+          <button
+            type="button"
+            className={s.item_button}
+            aria-label="Кнопка додати у кошик товар"
+          >
             Добавить в корзину / уже добавлено
           </button>
         </div>

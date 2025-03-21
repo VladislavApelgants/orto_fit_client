@@ -3,6 +3,7 @@ import { ContactUs } from "@/components/services/main/ContactUs/ContactUs";
 import { HealthInfo } from "@/components/services/main/HealthInfo/HealthInfo";
 import { Hero } from "@/components/services/main/Hero/Hero";
 import { OurAdvantages } from "@/components/services/main/OurAdvantages/OurAdvantages";
+import { OurContacts } from "@/components/services/main/OurContacts/OurContacts";
 import { Reviews } from "@/components/services/main/Rewievs/Reviews";
 import { TopProducts } from "@/components/services/main/TopProducts/TopProducts";
 import styles from "./page.module.scss";
@@ -18,6 +19,7 @@ export default function Home() {
       <TopProducts title="Stuffed Toys" contentFlag="fit" />
       <HealthInfo />
       <Reviews />
+      <OurContacts />
     </main>
   );
 }

@@ -20,6 +20,7 @@ export const MobileMenu = () => {
       <button
         onClick={toggleOpenMobileMenu}
         className={`${s.burger_btn} ${isOpen ? s.open : ""}`}
+        aria-label="Зачинити модальне вікно"
       >
         <span></span>
         <span></span>
