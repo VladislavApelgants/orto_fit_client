@@ -1,11 +1,26 @@
 .hero_section {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("/hero.webp");
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: aquamarine;
+  position: relative;
   padding: 166px 0;
+  background-color: aquamarine;
+}
+
+.image_wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.hero_image {
+  object-fit: cover;
+  object-position: bottom;
+  filter: brightness(50%); // Аналог твоего затемнения
+}
+
+.info_block {
+  position: relative;
+  z-index: 1;
+  color: white;
 }
 
 .info_block {
