@@ -1,6 +1,6 @@
 .mob_menu_container {
   position: fixed;
-  z-index: 1;
+  z-index: 100;
   right: -100%;
   top: 0;
   bottom: 0;
@@ -38,7 +38,7 @@
   background: none;
   border: none;
   padding: 0;
-  z-index: 40;
+  z-index: 101;
 
   span {
     display: block;
