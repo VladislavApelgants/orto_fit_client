@@ -5,15 +5,17 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import s from "./reviewsList.module.scss";
+import "./swiperReview.scss";
 const images = [
-  { id: 1, src: "/fakeReviews/olx/rev1.jpg", alt: "Отзыв 1" },
-  { id: 2, src: "/fakeReviews/olx/rev2.jpg", alt: "Отзыв 2" },
-  { id: 3, src: "/fakeReviews/olx/rev3.jpg", alt: "Отзыв 3" },
-  { id: 4, src: "/fakeReviews/olx/rev4.jpg", alt: "Отзыв 4" },
-  { id: 5, src: "/fakeReviews/olx/rev5.jpg", alt: "Отзыв 5" },
-  { id: 6, src: "/fakeReviews/olx/rev6.jpg", alt: "Отзыв 6" },
-  { id: 7, src: "/fakeReviews/olx/rev7.jpg", alt: "Отзыв 7" },
-  { id: 8, src: "/fakeReviews/olx/rev8.jpg", alt: "Отзыв 8" },
+  { id: 1, src: "/reviews/olx/rev1.jpg", alt: "Відгук з ОЛХ 1" },
+  { id: 2, src: "/reviews/olx/rev2.jpg", alt: "Відгук з ОЛХ 2" },
+  { id: 3, src: "/reviews/olx/rev3.jpg", alt: "Відгук з ОЛХ 3" },
+  { id: 4, src: "/reviews/olx/rev4.jpg", alt: "Відгук з ОЛХ 4" },
+  { id: 5, src: "/reviews/olx/rev5.jpg", alt: "Відгук з ОЛХ 5" },
+  { id: 6, src: "/reviews/olx/rev6.jpg", alt: "Відгук з ОЛХ 6" },
+  { id: 7, src: "/reviews/olx/rev7.jpg", alt: "Відгук з ОЛХ 7" },
+  { id: 8, src: "/reviews/olx/rev8.jpg", alt: "Відгук з ОЛХ 8" },
+  { id: 9, src: "/reviews/olx/rev9.jpg", alt: "Відгук з ОЛХ 9" },
 ];
 
 export const ReviewsList: FC = () => {
@@ -62,11 +64,7 @@ export const ReviewsList: FC = () => {
 
       {selectedImage && (
         <div className={s.modal} onClick={() => setSelectedImage(null)}>
-          <div className={s.modal_content} onClick={(e) => e.stopPropagation()}>
-            <button className={s.close} onClick={() => setSelectedImage(null)}>
-              <span></span>
-              <span></span>
-            </button>
+          <div className={s.modal_content}>
             <Image
               src={selectedImage}
               alt="Просмотр фото"
