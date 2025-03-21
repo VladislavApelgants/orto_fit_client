@@ -20,8 +20,12 @@ export const Hero = (): JSX.Element => {
         <div className={s.info_block}>
           <p className={s.subtitle}>Say Hello to ToyStore!</p>
           <h1 className={s.hero_title}>Free Ecommerce Template for Webflow</h1>
-          <Link href="/catalog" className={s.hero_link}>
-            Open catalog
+          <Link
+            href="/"
+            className={s.hero_link}
+            aria-label="Відчинити усі товари"
+          >
+            Усі товари
           </Link>
         </div>
       </div>

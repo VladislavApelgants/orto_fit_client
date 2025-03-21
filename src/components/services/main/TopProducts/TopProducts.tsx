@@ -22,8 +22,12 @@ export const TopProducts: FC<TopProductsTypes> = ({
       <div className="container">
         <div className={s.head_block}>
           <h2 className={s.section_title}>{title}</h2>
-          <Link href="/" className={s.more_link}>
-            Смотреть больше
+          <Link
+            href="/"
+            className={s.more_link}
+            aria-label="Відчинити усі товари"
+          >
+            Усі товари
             <Icon
               type="arrowRight"
               width={14}
