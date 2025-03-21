@@ -43,7 +43,7 @@ export const Nav: FC<NavTypes> = ({
             pathname === "/products" ? s.active : null
           )}
         >
-          <Link href="/products" className={clsx(navLink)}>
+          <Link href="/" className={clsx(navLink)}>
             {t("header.products")}
           </Link>
         </li>
@@ -54,7 +54,7 @@ export const Nav: FC<NavTypes> = ({
             pathname === "/about_us" ? s.active : null
           )}
         >
-          <Link href="/about_us" className={clsx(navLink)}>
+          <Link href="/" className={clsx(navLink)}>
             О нас
           </Link>
         </li>
@@ -65,7 +65,7 @@ export const Nav: FC<NavTypes> = ({
             pathname === "/delivery" ? s.active : null
           )}
         >
-          <Link href="/delivery" className={clsx(navLink)}>
+          <Link href="/" className={clsx(navLink)}>
             Доставка
           </Link>
         </li>
@@ -76,7 +76,7 @@ export const Nav: FC<NavTypes> = ({
             pathname === "/contacts" ? s.active : null
           )}
         >
-          <Link href="/contacts" className={clsx(navLink)}>
+          <Link href="/" className={clsx(navLink)}>
             {t("header.contacts")}
           </Link>
         </li>

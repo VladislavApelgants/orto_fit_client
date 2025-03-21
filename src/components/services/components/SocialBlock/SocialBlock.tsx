@@ -24,6 +24,7 @@ export const SocialBlock: FC<SocialBlockTypes> = ({
           className={linkClass}
           target="_blank"
           rel="noopener norefferer nofollow"
+          aria-label="Посилання на instagram"
         >
           <Icon
             type="instagram"
@@ -39,6 +40,7 @@ export const SocialBlock: FC<SocialBlockTypes> = ({
           className={clsx(s.link, linkClass)}
           target="_blank"
           rel="noopener norefferer nofollow"
+          aria-label="Посилання на youtube"
         >
           <Icon
             type="youtube"
@@ -54,6 +56,7 @@ export const SocialBlock: FC<SocialBlockTypes> = ({
           className={clsx(s.link, linkClass)}
           target="_blank"
           rel="noopener norefferer nofollow"
+          aria-label="Посилання на facebook"
         >
           <Icon
             type="facebook"

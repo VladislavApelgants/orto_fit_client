@@ -6,12 +6,11 @@ export const Address = (): JSX.Element => {
   return (
     <address>
       <ul>
-        <li>
-          {/* <p>Адресс</p> */}
-          <p>г.Днепр</p>
+        <li className={s.address_item}>
+          <p>м.Дніпро</p>
         </li>
-        <li>
-          <ContactsBlock linkClass={s.contact_link} />
+        <li className={s.address_item}>
+          <ContactsBlock listClass={s.list_class} linkClass={s.contact_link} />
         </li>
       </ul>
     </address>

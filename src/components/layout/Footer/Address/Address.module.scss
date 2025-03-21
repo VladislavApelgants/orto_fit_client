@@ -1,3 +1,6 @@
+.address_item:not(:last-child) {
+  margin-bottom: 6px;
+}
 .contact_link {
   color: var(--white_color);
   transition: color var(--main_hover_transition);
@@ -5,4 +8,8 @@
   &:focus {
     color: var(--text_hover_color);
   }
+}
+
+.list_class > li:not(:last-child) {
+  margin-bottom: 6px;
 }
