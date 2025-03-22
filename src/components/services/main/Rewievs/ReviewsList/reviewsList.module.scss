@@ -18,6 +18,7 @@
 .review_image {
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
+  border-radius: 10px;
 
   &:hover {
     transform: scale(1.05);
@@ -46,4 +47,5 @@
 .modal_content img {
   max-width: 90vw;
   max-height: 80vh;
+  border-radius: 10px;
 }

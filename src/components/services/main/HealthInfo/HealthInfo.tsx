@@ -1,7 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FC } from "react";
+import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 import s from "./HealthInfo.module.scss";
+import { VideoComponent } from "./VideoComponent/VideoComponent";
 
 export const HealthInfo: FC = () => {
   return (
@@ -17,7 +19,9 @@ export const HealthInfo: FC = () => {
               развивают координацию и делают ежедневные шаги малыша полезными и
               увлекательными!
             </p>
-            <Link href="" className={s.product_link}>Перейти к товару</Link>
+            <Link href="" className={s.product_link}>
+              Перейти к товару
+            </Link>
           </div>
           <div className={s.media_wrapper_container}>
             <div className={s.media_wrapper}>
@@ -37,16 +41,18 @@ export const HealthInfo: FC = () => {
                 className={s.mats_kids}
                 loading="lazy"
               />
-              <iframe
+              {/* <iframe
                 width="100%"
                 height="315"
-                src="https://www.youtube.com/embed/2bM-wnAj1To"
+                src="https://www.youtube-nocookie.com/embed/2bM-wnAj1To?cookies=0"
                 title="YouTube video player"
                 allowFullScreen
+                sandbox="allow-same-origin allow-scripts allow-popups"
                 referrerPolicy="strict-origin-when-cross-origin"
                 loading="lazy"
                 className={s.video}
-              />
+              /> */}
+              <VideoComponent className={s.video} />
             </div>
           </div>
         </div>
