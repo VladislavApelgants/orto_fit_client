@@ -13,12 +13,12 @@ export const ContactsBlock: FC<ContactsBlockTypes> = ({
     <ul className={listClass}>
       <li>
         <Link href={"/"} className={linkClass}>
-          Call Us: +38 (099) 234-09-86
+          Телефон: +38 (099) 234-09-86
         </Link>
       </li>
       <li>
         <Link href={"/"} className={linkClass}>
-          Email:toystore@template.com
+          Email: toystore@template.com
         </Link>
       </li>
     </ul>

@@ -1,11 +1,11 @@
-// import { Categories } from "@/components/services/main/Categories/Categories";
+import { Categories } from "@/components/services/main/Categories/Categories";
 import { ContactUs } from "@/components/services/main/ContactUs/ContactUs";
-// import { HealthInfo } from "@/components/services/main/HealthInfo/HealthInfo";
-// import { Hero } from "@/components/services/main/Hero/Hero";
-// import { OurAdvantages } from "@/components/services/main/OurAdvantages/OurAdvantages";
+import { HealthInfo } from "@/components/services/main/HealthInfo/HealthInfo";
+import { Hero } from "@/components/services/main/Hero/Hero";
+import { OurAdvantages } from "@/components/services/main/OurAdvantages/OurAdvantages";
 import { OurContacts } from "@/components/services/main/OurContacts/OurContacts";
-// import { Reviews } from "@/components/services/main/Rewievs/Reviews";
-// import { TopProducts } from "@/components/services/main/TopProducts/TopProducts";
+import { Reviews } from "@/components/services/main/Rewievs/Reviews";
+import { TopProducts } from "@/components/services/main/TopProducts/TopProducts";
 import { Metadata } from "next";
 import styles from "./page.module.scss";
 
@@ -69,14 +69,14 @@ export const viewport = {
 export default function Home() {
   return (
     <main className={styles.page}>
-      {/* <Hero /> */}
+      <Hero />
       <ContactUs />
-      {/* <OurAdvantages />
+      <OurAdvantages />
       <Categories />
       <TopProducts title="Wooden Toys" contentFlag="toys" />
       <TopProducts title="Stuffed Toys" contentFlag="fit" />
       <HealthInfo />
-      <Reviews /> */}
+      <Reviews />
       <OurContacts />
     </main>
   );

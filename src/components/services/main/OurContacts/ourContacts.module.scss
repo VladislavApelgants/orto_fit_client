@@ -2,10 +2,10 @@
   background-color: var(--header_bgc);
   padding: 60px 0;
 }
+
 .contacts_wrapper {
   @media screen and (min-width: 768px) {
     display: flex;
-    // align-items: center;
     gap: 24px;
     align-items: stretch;
     & > div {
@@ -16,12 +16,18 @@
 
 .address_wrapper {
   background-color: #0000005d;
-  padding: 32px 60px;
+  padding: 16px 14px;
   border-radius: 10px;
+
   @media screen and (max-width: 767px) {
     margin-bottom: 24px;
   }
+
+  @media screen and (min-width: 768px) {
+    padding: 32px 60px;
+  }
 }
+
 .city_address {
   margin-bottom: 16px;
 }
@@ -31,6 +37,7 @@
   font-size: 18px;
   line-height: 1.5;
 }
+
 .address_link {
   font-family: var(--font-Playfair-Display);
   transition: color var(--main_hover_transition);
@@ -39,9 +46,29 @@
     color: var(--text_hover_color);
   }
 }
+
 .address_list {
+  margin-bottom: 24px;
   & > li:not(:last-child) {
     margin-bottom: 16px;
+  }
+}
+
+.messenger_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  @media screen and (max-width: 479px) {
+    justify-content: center;
+  }
+}
+
+.messenger_link {
+  transition: transform var(--main_hover_transition);
+  display: inline-block;
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
   }
 }
 
