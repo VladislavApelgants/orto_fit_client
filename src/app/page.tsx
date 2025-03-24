@@ -1,5 +1,5 @@
 // import { Categories } from "@/components/services/main/Categories/Categories";
-// import { ContactUs } from "@/components/services/main/ContactUs/ContactUs";
+import { ContactUs } from "@/components/services/main/ContactUs/ContactUs";
 // import { HealthInfo } from "@/components/services/main/HealthInfo/HealthInfo";
 // import { Hero } from "@/components/services/main/Hero/Hero";
 // import { OurAdvantages } from "@/components/services/main/OurAdvantages/OurAdvantages";
@@ -69,9 +69,9 @@ export const viewport = {
 export default function Home() {
   return (
     <main className={styles.page}>
-      {/* <Hero />
+      {/* <Hero /> */}
       <ContactUs />
-      <OurAdvantages />
+      {/* <OurAdvantages />
       <Categories />
       <TopProducts title="Wooden Toys" contentFlag="toys" />
       <TopProducts title="Stuffed Toys" contentFlag="fit" />

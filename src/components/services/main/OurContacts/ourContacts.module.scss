@@ -28,9 +28,16 @@
 
 .city_address,
 .address_link {
-  font-family: var(--font-Playfair-Display);
   font-size: 18px;
   line-height: 1.5;
+}
+.address_link {
+  font-family: var(--font-Playfair-Display);
+  transition: color var(--main_hover_transition);
+  &:hover,
+  &:focus {
+    color: var(--text_hover_color);
+  }
 }
 .address_list {
   & > li:not(:last-child) {
