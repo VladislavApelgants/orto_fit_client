@@ -30,6 +30,7 @@ export const OurContacts: FC = () => {
               loading="lazy"
               allow="geolocation; fullscreen; encrypted-media"
               className={s.googlemaps}
+              aria-label="Відображення де ми знаходимось на google maps"
             ></iframe>
           </div>
         </div>
