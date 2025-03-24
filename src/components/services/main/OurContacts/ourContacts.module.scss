@@ -1,0 +1,52 @@
+.our_contacts {
+  background-color: var(--header_bgc);
+  padding: 60px 0;
+}
+.contacts_wrapper {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    // align-items: center;
+    gap: 24px;
+    align-items: stretch;
+    & > div {
+      flex: 1;
+    }
+  }
+}
+
+.address_wrapper {
+  background-color: #0000005d;
+  padding: 32px 60px;
+  border-radius: 10px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 24px;
+  }
+}
+.city_address {
+  margin-bottom: 16px;
+}
+
+.city_address,
+.address_link {
+  font-family: var(--font-Playfair-Display);
+  font-size: 18px;
+  line-height: 1.5;
+}
+.address_list {
+  & > li:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+.googlemaps {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.our_contacts_title {
+  font-size: 36px;
+  line-height: 1.28;
+  margin-bottom: 32px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid white;
+}
