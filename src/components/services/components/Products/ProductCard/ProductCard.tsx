@@ -1,3 +1,5 @@
+"use client";
+import { useTranslate } from "@tolgee/react";
 import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
@@ -17,6 +19,7 @@ export const ProductCard: FC<ProductCardType> = ({
   price,
   count,
 }) => {
+  const { t } = useTranslate();
   return (
     <div className={s.item}>
       <Link href="/" className={s.item_link}>
@@ -30,15 +33,17 @@ export const ProductCard: FC<ProductCardType> = ({
         <div className={s.item_info_block}>
           <h3 className={s.item_title}>{title}</h3>
           <p className={clsx(s.item_text, s.item_count)}>
-            Кількість: {count} шт
+            {t("categories.count")}: {count} {t("categories.pieces")}
           </p>
-          <p className={clsx(s.item_text, s.item_price)}>Ціна: {price} грн</p>
+          <p className={clsx(s.item_text, s.item_price)}>
+            {t("categories.price")}: {price} {t("categories.currency")}
+          </p>
           <button
             type="button"
             className={s.item_button}
-            aria-label="Кнопка додати у кошик товар"
+            aria-label={t("categories.addCart")}
           >
-            Добавить в корзину / уже добавлено
+            {t("categories.addCart")} / {t("categories.addedCart")}
           </button>
         </div>
       </Link>

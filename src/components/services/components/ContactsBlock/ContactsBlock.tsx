@@ -3,17 +3,19 @@ import { FC } from "react";
 type ContactsBlockTypes = {
   listClass?: string;
   linkClass?: string;
+  contentEmail: string;
 };
 
 export const ContactsBlock: FC<ContactsBlockTypes> = ({
   listClass,
   linkClass,
+  contentEmail,
 }): React.JSX.Element => {
   return (
     <ul className={listClass}>
       <li>
         <Link href={"/"} className={linkClass}>
-          Телефон: +38 (099) 234-09-86
+          {contentEmail}: +38 (099) 234-09-86
         </Link>
       </li>
       <li>

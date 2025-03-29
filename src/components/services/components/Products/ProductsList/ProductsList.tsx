@@ -18,7 +18,6 @@ export const ProductsList: FC<ProductsListType> = ({ data }) => {
       spaceBetween={24}
       centeredSlides={false}
       modules={[Pagination, Navigation]}
-      // navigation={true}
       pagination={{
         type: "progressbar",
       }}

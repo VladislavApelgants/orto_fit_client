@@ -1,8 +1,10 @@
+import { getTranslate } from "@/tolgee/server";
 import Image from "next/image";
 import { FC } from "react";
 import s from "./ourAdvantages.module.scss";
 
-export const OurAdvantages: FC = () => {
+export const OurAdvantages: FC = async () => {
+  const t = await getTranslate();
   return (
     <section className={s.advantages_section}>
       <div className="container">
@@ -16,10 +18,11 @@ export const OurAdvantages: FC = () => {
               height={300}
               className={s.advantages_image}
             />
-            <h3 className={s.advantages_card_title}>Быстрая отправка</h3>
+            <h3 className={s.advantages_card_title}>
+              {t("advantages.speedTitle")}
+            </h3>
             <p className={s.advantages_text}>
-              Мы гарантируем оперативную обработку и отправку заказов в
-              кратчайшие сроки. Ваш заказ будет отправлен сразу после оформления
+              {t("advantages.speedDescription")}
             </p>
           </li>
           <li className={s.advantages_item}>
@@ -31,12 +34,9 @@ export const OurAdvantages: FC = () => {
               className={s.advantages_image}
             />
             <h3 className={s.advantages_card_title}>
-              Высокие рейтинги и реальные отзывы.
+              {t("advantages.ratingTitle")}
             </h3>
-            <p className={s.advantages_text}>
-              Мы гордимся доверием наших клиентов и стремимся к лучшему качеству
-              обслуживания.
-            </p>
+            <p className={s.advantages_text}>{t("advantages.ratindDescr")}</p>
           </li>
           <li className={s.advantages_item}>
             <Image
@@ -47,11 +47,10 @@ export const OurAdvantages: FC = () => {
               className={s.advantages_image}
             />
             <h3 className={s.advantages_card_title}>
-              Ортопедические центры и детские сады.
+              {t("advantages.orthopedicTitle")}
             </h3>
             <p className={s.advantages_text}>
-              Наши коврики используются в специализированных учреждениях для
-              детского развития и реабилитации.
+              {t("advantages.orthopedicDescr")}
             </p>
           </li>
           <li className={s.advantages_item}>
@@ -63,12 +62,9 @@ export const OurAdvantages: FC = () => {
               className={s.advantages_image}
             />
             <h3 className={s.advantages_card_title}>
-              Качество товара и обслуживания
+              {t("advantages.qualityTitle")}
             </h3>
-            <p className={s.advantages_text}>
-              1000+ довольных клиентов. Наши коврики выбрали сотни семей по всей
-              стране.
-            </p>
+            <p className={s.advantages_text}>{t("advantages.qualityDescr")}</p>
           </li>
         </ul>
       </div>

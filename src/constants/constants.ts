@@ -10,12 +10,28 @@ export const DEFAULT_LANGUAGE = "uk";
 // export const PRIVACY_POLICY_NS = 'Hero';
 // export const COOKIE_POLICY_NS = 'Our advantages';
 export const HEADER_NS = "header";
+export const CONTACTS_NS = "contacts";
+export const HERO_NS = "hero";
+export const ADVANTAGES_NS = "advantages";
+export const CATEGORIES_NS = "categories";
+export const HEALTH_NS = "health";
+export const REVIEWS_NS = "reviews";
+export const OUR_CONTACTS_NS = "ourContacts";
+export const UNDER_FOOTER_NS = "underFooter";
 // export const COOKIE_BANNER_NS = 'Reviews';
 // export const COOKIE_BANNER_N1 = 'We-offer';
 
 export const NAMESPACES = [
   // HOME_NS,
   HEADER_NS,
+  CONTACTS_NS,
+  HERO_NS,
+  ADVANTAGES_NS,
+  CATEGORIES_NS,
+  HEALTH_NS,
+  REVIEWS_NS,
+  OUR_CONTACTS_NS,
+  UNDER_FOOTER_NS,
   // FOOTER_NS,
   // PORTFOLIO_NS,
   // COOKIE_BANNER_NS,

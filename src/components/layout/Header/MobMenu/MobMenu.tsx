@@ -3,6 +3,7 @@
 import { ContactsBlock } from "@/components/services/components/ContactsBlock/ContactsBlock";
 import { SocialBlock } from "@/components/services/components/SocialBlock/SocialBlock";
 import { LangSelector } from "@/components/shared/LangSelector/LangSelector";
+import { useTranslate } from "@tolgee/react";
 import { useState } from "react";
 import { Cart } from "../Cart/Cart";
 import { Nav } from "../Nav/Nav";
@@ -10,7 +11,7 @@ import s from "./mobMenu.module.scss";
 
 export const MobileMenu = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-
+  const { t } = useTranslate();
   const toggleOpenMobileMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -38,7 +39,11 @@ export const MobileMenu = () => {
           </div>
         </div>
         <Nav navList={s.navList} navLink={s.navLink} navClass={s.navClass} />
-        <ContactsBlock listClass={s.contactslList} linkClass={s.contactLink} />
+        <ContactsBlock
+          listClass={s.contactslList}
+          linkClass={s.contactLink}
+          contentEmail={t("contacts.phone")}
+        />
         <SocialBlock
           listClass={s.socialList}
           iconClass={s.socialIcon}

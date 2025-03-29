@@ -18,18 +18,18 @@
 }
 
 .info_block {
-  position: relative;
-  z-index: 1;
-  color: white;
 }
 
 .info_block {
   padding: 55px 54px;
   background: rgba(14, 115, 100, 0.6);
-  max-width: 570px;
+  max-width: 592px;
   margin: 0 auto;
   border-radius: 16px;
   text-align: center;
+  position: relative;
+  z-index: 1;
+  color: white;
 }
 .subtitle {
   font-family: var(--font-montserrat);

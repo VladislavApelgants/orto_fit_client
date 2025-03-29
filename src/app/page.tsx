@@ -73,8 +73,8 @@ export default function Home() {
       <ContactUs />
       <OurAdvantages />
       <Categories />
-      <TopProducts title="Wooden Toys" contentFlag="toys" />
-      <TopProducts title="Stuffed Toys" contentFlag="fit" />
+      <TopProducts contentFlag="massage" />
+      <TopProducts contentFlag="toys" />
       <HealthInfo />
       <Reviews />
       <OurContacts />

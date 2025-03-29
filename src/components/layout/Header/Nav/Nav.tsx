@@ -55,7 +55,7 @@ export const Nav: FC<NavTypes> = ({
           )}
         >
           <Link href="/" className={clsx(navLink)}>
-            О нас
+            {t("header.aboutUS")}
           </Link>
         </li>
         <li
@@ -66,7 +66,7 @@ export const Nav: FC<NavTypes> = ({
           )}
         >
           <Link href="/" className={clsx(navLink)}>
-            Доставка
+            {t("header.delivery")}
           </Link>
         </li>
         <li

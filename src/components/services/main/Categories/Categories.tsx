@@ -1,3 +1,4 @@
+import { getTranslate } from "@/tolgee/server";
 import Image from "next/image";
 import Link from "next/link";
 import { JSX } from "react";
@@ -25,10 +26,11 @@ const mockData = [
     categoryName: "Wooden Toys",
   },
 ];
-export const Categories = (): JSX.Element => {
+export const Categories = async (): Promise<JSX.Element> => {
+  const t = await getTranslate();
   return (
     <section className={s.category_section}>
-      <h2 className="hidden">Категории</h2>
+      <h2 className="hidden">{t("categories.categoryTitle")}</h2>
       <div className="container">
         <ul className={s.categories_list}>
           {mockData &&
@@ -44,7 +46,7 @@ export const Categories = (): JSX.Element => {
                 <div className={s.info_block}>
                   <h3 className={s.card_itle}>{categoryName}</h3>
                   <Link href="/" className={s.card_link}>
-                    Начать покупки
+                    {t("categories.allProducts")}
                   </Link>
                 </div>
               </li>

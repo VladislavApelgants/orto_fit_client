@@ -1,4 +1,5 @@
 import { Icon } from "@/components/ui/Icon/Icon";
+import { getTranslate } from "@/tolgee/server";
 import { mockDataMats } from "@/utils/mockDataMats";
 import { mockDataToys } from "@/utils/mockDataToys";
 import clsx from "clsx";
@@ -9,14 +10,15 @@ import "./swiperStyle.scss";
 import s from "./topProducts.module.scss";
 
 type TopProductsTypes = {
-  title: string;
-  contentFlag: "fit" | "toys";
+  contentFlag: "massage" | "toys";
 };
-export const TopProducts: FC<TopProductsTypes> = ({
-  title,
+export const TopProducts: FC<TopProductsTypes> = async ({
   contentFlag,
-}): JSX.Element => {
-  const data = contentFlag === "fit" ? mockDataMats : mockDataToys;
+}): Promise<JSX.Element> => {
+  const t = await getTranslate();
+  const data = contentFlag === "massage" ? mockDataMats : mockDataToys;
+  const title =
+    contentFlag === "massage" ? t("categories.massage") : t("categories.toys");
   return (
     <section className={clsx(s.section, "top_products")}>
       <div className="container">
@@ -25,9 +27,9 @@ export const TopProducts: FC<TopProductsTypes> = ({
           <Link
             href="/"
             className={s.more_link}
-            aria-label="Відчинити усі товари"
+            aria-label={t("categories.allProductsAria")}
           >
-            Усі товари
+            {t("categories.allProducts")}
             <Icon
               type="arrowRight"
               width={14}

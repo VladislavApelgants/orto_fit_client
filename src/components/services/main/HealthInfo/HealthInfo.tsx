@@ -1,3 +1,4 @@
+import { getTranslate } from "@/tolgee/server";
 import Image from "next/image";
 import Link from "next/link";
 import { FC } from "react";
@@ -5,22 +6,18 @@ import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 import s from "./HealthInfo.module.scss";
 import { VideoComponent } from "./VideoComponent/VideoComponent";
 
-export const HealthInfo: FC = () => {
+export const HealthInfo: FC = async () => {
+  const t = await getTranslate();
+
   return (
     <section className={s.health_section}>
       <div className="container">
-        <h2 className={s.health_title}>Здоровье и развитие</h2>
+        <h2 className={s.health_title}>{t("health.healthTitle")}</h2>
         <div className={s.content_wrapper}>
           <div className={s.content_block}>
-            <p className={s.health_text}>
-              Здоровье ребенка – основа его гармоничного развития.
-              Ортопедические коврики помогают укреплять стопы, предотвращая
-              плоскостопие и улучшая кровообращение. Они стимулируют мышцы,
-              развивают координацию и делают ежедневные шаги малыша полезными и
-              увлекательными!
-            </p>
+            <p className={s.health_text}>{t("health.healthDescr")}</p>
             <Link href="" className={s.product_link}>
-              Перейти к товару
+              {t("health.link")}
             </Link>
           </div>
           <div className={s.media_wrapper_container}>

@@ -1,19 +1,25 @@
+import { getTranslate } from "@/tolgee/server";
 import { FC } from "react";
 import { ContactsBlock } from "../../components/ContactsBlock/ContactsBlock";
 import { MessengerList } from "../../components/MessengerList/MessengerList";
 import s from "./ourContacts.module.scss";
 
-export const OurContacts: FC = () => {
+export const OurContacts: FC = async () => {
+  const t = await getTranslate();
+
   return (
     <section className={s.our_contacts}>
       <div className="container">
         <div className={s.contacts_wrapper}>
           <div className={s.address_wrapper}>
-            <h2 className={s.our_contacts_title}>Наши контакты</h2>
-            <p className={s.city_address}>м.Дніпро, Лівобережний 3</p>
+            <h2 className={s.our_contacts_title}>
+              {t("ourContacts.contactsTitle")}
+            </h2>
+            <p className={s.city_address}>{t("ourContacts.address")}</p>
             <ContactsBlock
               linkClass={s.address_link}
               listClass={s.address_list}
+              contentEmail={t("contacts.phone")}
             />
             <MessengerList
               listClass={s.messenger_list}
