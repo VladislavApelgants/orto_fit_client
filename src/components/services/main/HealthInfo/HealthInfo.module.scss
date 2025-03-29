@@ -53,8 +53,8 @@
 
   &:hover,
   &:focus {
-    background-color: var(--aboveHeader_bgc);
-    color: var(--white_color);
+    background-color: var(--gray_bgc);
+    color: var(--text_hover_color);
   }
 }
 

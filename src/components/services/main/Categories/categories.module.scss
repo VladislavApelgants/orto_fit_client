@@ -1,6 +1,6 @@
 .category_section {
-  padding-top: 120px;
-  padding-bottom: 60px;
+  padding-top: 80px;
+  padding-bottom: 80px;
   position: relative;
 }
 .categories_list {
@@ -8,6 +8,17 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 40px 32px;
+}
+
+$colors: #ffc12c, #fb416b, #68694c, #56894c;
+.categories_item {
+  $count: length($colors);
+
+  @for $i from 1 through $count {
+    &:nth-child(#{$i}) {
+      background-color: nth($colors, $i);
+    }
+  }
 }
 
 .categories_item {
@@ -104,6 +115,16 @@
   background-color: var(--white_color);
   border-radius: 20px;
   color: var(--main_text_color);
+
+  transition: background-color var(--main_hover_transition),
+    color var(--main_hover_transition), transform var(--main_hover_transition);
+  &:hover,
+  &:focus {
+    background-color: var(--gray_bgc);
+    color: var(--text_hover_color);
+    transform: scale(1.03);
+  }
+
   @media screen and (min-width: 1024px) {
     display: block;
     left: 20px;

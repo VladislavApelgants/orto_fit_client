@@ -51,17 +51,17 @@
 }
 
 .hero_link {
-  background-color: var(--aboveHeader_bgc);
+  background-color: #04412c;
   padding: 12px 28px;
   border-radius: 24px;
   line-height: 1.71;
   display: inline-block;
   transition: color var(--main_hover_transition),
-    background-color var(--main_hover_transition);
+    transform var(--main_hover_transition);
 
   &:hover,
   &:focus {
-    background-color: var(--white_color);
     color: var(--text_hover_color);
+    transform: scale(1.05);
   }
 }

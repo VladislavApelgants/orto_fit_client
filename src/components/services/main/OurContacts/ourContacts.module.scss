@@ -18,6 +18,10 @@
   background-color: #0000005d;
   padding: 16px 14px;
   border-radius: 10px;
+  border: 1px solid rgb(255 255 255 / 15%);
+  -webkit-box-shadow: 0px 0px 3px 0px rgba(255, 255, 255, 0.2);
+  -moz-box-shadow: 0px 0px 3px 0px rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 0px 3px 0px rgba(255, 255, 255, 0.2);
 
   @media screen and (max-width: 767px) {
     margin-bottom: 24px;

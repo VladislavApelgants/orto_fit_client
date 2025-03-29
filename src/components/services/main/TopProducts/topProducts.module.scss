@@ -1,5 +1,6 @@
 .section {
-  padding: 60px 0;
+  padding-top: 60px;
+  padding-bottom: 45px;
   color: var(--main_text_color);
 
   &:nth-child(2n-1) {
@@ -41,8 +42,8 @@
 
   &:hover,
   &:focus {
-    fill: var(--header_bgc);
+    fill: var(--text_hover_color);
     color: var(--text_hover_color);
-    border-color: var(--header_bgc);
+    border-color: var(--text_hover_color);
   }
 }
