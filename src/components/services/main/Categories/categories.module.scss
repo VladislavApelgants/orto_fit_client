@@ -1,3 +1,4 @@
+@use "sass:list";
 .category_section {
   padding-top: 80px;
   padding-bottom: 80px;
@@ -11,12 +12,13 @@
 }
 
 $colors: #ffc12c, #fb416b, #68694c, #56894c;
+
 .categories_item {
-  $count: length($colors);
+  $count: list.length($colors); // Исправлено
 
   @for $i from 1 through $count {
     &:nth-child(#{$i}) {
-      background-color: nth($colors, $i);
+      background-color: list.nth($colors, $i); // Исправлено
     }
   }
 }

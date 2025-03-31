@@ -39,18 +39,26 @@
   position: absolute;
   top: 100%;
   left: 0;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  width: max-content;
+  background: rgba(0, 0, 0, 0.326);
   backdrop-filter: blur(5px);
   border-radius: 8px;
   padding: 4px 0;
   z-index: 10;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .lang_option {
   padding: 8px 16px;
   color: var(--white_color);
+  background-color: transparent;
+  border: none;
   cursor: pointer;
+  width: 100%;
+  border-radius: 2px;
   // transition: background 0.2s;
 
   &:hover,

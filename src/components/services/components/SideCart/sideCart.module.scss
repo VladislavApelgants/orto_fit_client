@@ -1,0 +1,24 @@
+.side_cart_wrapper {
+  position: fixed;
+  top: 20%;
+  right: 0;
+  width: 70px;
+  height: 70px;
+  background-color: #0000008e;
+  z-index: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.601);
+  border-left: 1px solid rgba(255, 255, 255, 0.601);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.601);
+  border-radius: 10px 0 0 10px;
+  transition: opacity var(--main_hover_transition);
+}
+.side_cart_wrapper.show {
+  opacity: 1;
+}
+.side_cart_wrapper.hide {
+  pointer-events: none;
+  opacity: 0;
+}

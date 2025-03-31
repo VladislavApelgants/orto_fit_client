@@ -4,16 +4,28 @@ import { ContactsBlock } from "@/components/services/components/ContactsBlock/Co
 import { SocialBlock } from "@/components/services/components/SocialBlock/SocialBlock";
 import { LangSelector } from "@/components/shared/LangSelector/LangSelector";
 import { useTranslate } from "@tolgee/react";
-import { useState } from "react";
-import { Cart } from "../Cart/Cart";
+import { useEffect, useState } from "react";
+import { useWindowSize } from "react-use";
+import { Cart } from "../../../services/components/Cart/Cart";
 import { Nav } from "../Nav/Nav";
 import s from "./mobMenu.module.scss";
 
 export const MobileMenu = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const { width } = useWindowSize();
+
   const { t } = useTranslate();
+
+  useEffect(() => {
+    if (width >= 768) {
+      setIsOpen(false);
+      document.body.style.overflow = "auto";
+    }
+  }, [width]);
+
   const toggleOpenMobileMenu = () => {
     setIsOpen(!isOpen);
+    document.body.style.overflow = !isOpen ? "hidden" : "auto";
   };
 
   return (

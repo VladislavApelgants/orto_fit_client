@@ -1,6 +1,7 @@
 import { Footer } from "@/components/layout/Footer/Footer";
 import { HeadContacts } from "@/components/layout/HeadContacts/HeadContacts";
 import { Header } from "@/components/layout/Header/Header";
+import { SideCart } from "@/components/services/components/SideCart/SideCart";
 import { TolgeeNextProvider } from "@/tolgee/client";
 import { getLanguage } from "@/tolgee/language";
 import { getStaticData } from "@/tolgee/shared";
@@ -31,6 +32,7 @@ export default async function RootLayout({
         <TolgeeNextProvider language={locale} staticData={staticData}>
           <HeadContacts />
           <Header />
+          <SideCart />
           {children}
           <Footer />
         </TolgeeNextProvider>

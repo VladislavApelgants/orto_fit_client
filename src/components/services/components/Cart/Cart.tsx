@@ -13,6 +13,7 @@ export const Cart = (): JSX.Element => {
         boxWidth={256}
         classnames={s.icon_cart}
       />
+      <span className={s.count}>12</span>
     </button>
   );
 };

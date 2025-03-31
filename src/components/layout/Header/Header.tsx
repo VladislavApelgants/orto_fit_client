@@ -1,4 +1,4 @@
-import { Cart } from "@/components/layout/Header/Cart/Cart";
+import { Cart } from "@/components/services/components/Cart/Cart";
 import { Logo } from "@/components/services/components/Logo/Logo";
 import { LangSelector } from "@/components/shared/LangSelector/LangSelector";
 import { JSX } from "react";
