@@ -5,7 +5,7 @@ import { mockDataToys } from "@/utils/mockDataToys";
 import clsx from "clsx";
 import Link from "next/link";
 import { FC, JSX } from "react";
-import { ProductsList } from "../../components/Products/ProductsList/ProductsList";
+import { ProductsListSlider } from "../../components/Products/ProductsListSlider/ProductsListSlider";
 import "./swiperStyle.scss";
 import s from "./topProducts.module.scss";
 
@@ -25,7 +25,7 @@ export const TopProducts: FC<TopProductsTypes> = async ({
         <div className={s.head_block}>
           <h2 className={s.section_title}>{title}</h2>
           <Link
-            href="/"
+            href={`/products?category=${contentFlag}`}
             className={s.more_link}
             aria-label={t("categories.allProductsAria")}
           >
@@ -39,7 +39,7 @@ export const TopProducts: FC<TopProductsTypes> = async ({
           </Link>
         </div>
         <div className={s.product_block}>
-          <ProductsList data={data} />
+          <ProductsListSlider data={data} />
         </div>
       </div>
     </section>

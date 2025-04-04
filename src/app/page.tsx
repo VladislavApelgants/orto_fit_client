@@ -7,7 +7,6 @@ import { OurContacts } from "@/components/services/main/OurContacts/OurContacts"
 import { Reviews } from "@/components/services/main/Rewievs/Reviews";
 import { TopProducts } from "@/components/services/main/TopProducts/TopProducts";
 import { Metadata } from "next";
-import styles from "./page.module.scss";
 
 export const metadata: Metadata = {
   title: "MaryOrtoFit – Магазин ортопедических ковриков и товаров для здоровья",
@@ -68,7 +67,7 @@ export const viewport = {
 
 export default function Home() {
   return (
-    <main className={styles.page}>
+    <>
       <Hero />
       <ContactUs />
       <OurAdvantages />
@@ -78,6 +77,6 @@ export default function Home() {
       <HealthInfo />
       <Reviews />
       <OurContacts />
-    </main>
+    </>
   );
 }

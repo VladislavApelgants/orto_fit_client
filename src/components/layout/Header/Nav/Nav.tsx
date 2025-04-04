@@ -43,7 +43,7 @@ export const Nav: FC<NavTypes> = ({
             pathname === "/products" ? s.active : null
           )}
         >
-          <Link href="/" className={clsx(navLink)}>
+          <Link href="/products" className={clsx(navLink)}>
             {t("header.products")}
           </Link>
         </li>
@@ -51,10 +51,10 @@ export const Nav: FC<NavTypes> = ({
           className={clsx(
             s.nav_item,
             navItem,
-            pathname === "/about_us" ? s.active : null
+            pathname === "/about" ? s.active : null
           )}
         >
-          <Link href="/" className={clsx(navLink)}>
+          <Link href="/about" className={clsx(navLink)}>
             {t("header.aboutUS")}
           </Link>
         </li>
@@ -65,7 +65,7 @@ export const Nav: FC<NavTypes> = ({
             pathname === "/delivery" ? s.active : null
           )}
         >
-          <Link href="/" className={clsx(navLink)}>
+          <Link href="/delivery" className={clsx(navLink)}>
             {t("header.delivery")}
           </Link>
         </li>
@@ -76,7 +76,7 @@ export const Nav: FC<NavTypes> = ({
             pathname === "/contacts" ? s.active : null
           )}
         >
-          <Link href="/" className={clsx(navLink)}>
+          <Link href="/contacts" className={clsx(navLink)}>
             {t("header.contacts")}
           </Link>
         </li>

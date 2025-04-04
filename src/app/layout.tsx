@@ -33,7 +33,7 @@ export default async function RootLayout({
           <HeadContacts />
           <Header />
           <SideCart />
-          {children}
+          <main>{children}</main>
           <Footer />
         </TolgeeNextProvider>
       </body>
