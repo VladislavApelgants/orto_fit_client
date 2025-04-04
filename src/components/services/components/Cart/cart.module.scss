@@ -1,8 +1,10 @@
 .cart_btn {
+  display: inline-block;
   background-color: transparent;
   border-color: transparent;
   cursor: pointer;
   position: relative;
+  color: var(--white_color);
 
   &:hover .icon_cart {
     fill: var(--text_hover_color);
@@ -23,12 +25,11 @@
   position: absolute;
   top: -11px;
   right: -11px;
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   background-color: #00000098;
-  // background-color: #ff8400;
-  // color: var(--main_text_color);
+  text-align: center;
   font-weight: 500;
   transition: background-color var(--main_hover_transition),
     color var(--main_hover_transition);
