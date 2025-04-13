@@ -1,7 +1,9 @@
+import { OurContacts } from "@/components/services/main/OurContacts/OurContacts";
+
 export default function Contacts() {
   return (
     <>
-      <h1>Contacts page</h1>
+      <OurContacts />
     </>
   );
 }
