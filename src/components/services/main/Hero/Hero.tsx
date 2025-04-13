@@ -23,7 +23,7 @@ export const Hero = async (): Promise<JSX.Element> => {
           <p className={s.subtitle}>{t("hero.heroSubtitle")}</p>
           <h1 className={s.hero_title}>{t("hero.mainTitle")}</h1>
           <Link
-            href="/"
+            href="/products"
             className={s.hero_link}
             aria-label="Відчинити усі товари"
           >
