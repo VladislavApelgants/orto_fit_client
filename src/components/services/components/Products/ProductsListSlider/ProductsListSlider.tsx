@@ -43,6 +43,7 @@ export const ProductsListSlider: FC<ProductsListSliderType> = ({ data }) => {
         data.map(({ presentImage, title, price, configuration, id }) => (
           <SwiperSlide key={id}>
             <ProductCard
+              id={id}
               image={presentImage}
               title={title}
               price={price}

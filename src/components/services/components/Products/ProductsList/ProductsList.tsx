@@ -12,6 +12,7 @@ export const ProductsList: FC<ProductsListTypes> = ({ data }) => {
         data.map(({ presentImage, title, price, configuration, id }) => (
           <li key={id} className={s.item}>
             <ProductCard
+              id={id}
               image={presentImage}
               title={title}
               price={price}

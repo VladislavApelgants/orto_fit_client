@@ -4,9 +4,11 @@ import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
 import { FC } from "react";
+import { AddCartBtn } from "../../AddCartBtn/AddCartBtn";
 import s from "./productCard.module.scss";
 
 export type ProductCardType = {
+  id: string;
   image: string;
   title: string;
   price: number;
@@ -14,6 +16,7 @@ export type ProductCardType = {
 };
 
 export const ProductCard: FC<ProductCardType> = ({
+  id,
   image,
   title,
   price,
@@ -38,15 +41,13 @@ export const ProductCard: FC<ProductCardType> = ({
           <p className={clsx(s.item_text, s.item_price)}>
             {t("categories.price")}: {price} {t("categories.currency")}
           </p>
-          <button
-            type="button"
-            className={s.item_button}
-            aria-label={t("categories.addCart")}
-          >
-            {t("categories.addCart")} / {t("categories.addedCart")}
-          </button>
         </div>
       </Link>
+      <AddCartBtn
+        product={{ id, image, title, price, quantity: count }}
+        classes={s.item_button}
+        aria={t("categories.addCart")}
+      />
     </div>
   );
 };
